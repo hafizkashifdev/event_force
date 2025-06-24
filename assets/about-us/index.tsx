@@ -1,0 +1,17 @@
+export { default as HeroSectionImage } from "./Image (3).png";
+export { default as missionSectionImage } from "./Image (5).png";
+export { default as TabImage } from "./tabImage.png";
+export { default as shakeHandImage } from "./shakeHand.png";
+export { default as TeamsMemberImage } from "./data-report 1.png";
+export { default as TeamsMemberImage1 } from "./data-report 1 (1).png";
+export { default as TeamsMemberImage2 } from "./data-report 1 (2).png";
+export { default as TeamsMemberImage3 } from "./data-report 1 (3).png";
+export { default as TeamsMemberImage4 } from "./data-report 1 (4).png";
+export { default as TeamsMemberImage5 } from "./data-report 1 (5).png";
+export { default as TeamsMemberImage6 } from "./data-report 1 (6).png";
+export { default as TeamsMemberImage7 } from "./data-report 1 (7).png";
+export { default as TeamsMemberImage8 } from "./data-report 1 (8).png";
+export { default as TeamsMemberImage9 } from "./data-report 1 (9).png";
+export { default as TeamsMemberImage10 } from "./data-report 1 (10).png";
+export { default as TeamsMemberImage11 } from "./data-report 1 (11).png";
+export { default as TeamsMemberImage12 } from "./data-report 1 (12).png"; 

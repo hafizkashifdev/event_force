@@ -1,0 +1,53 @@
+{
+  "name": "acc-salesite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@hookform/resolvers": "^5.0.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.1.2",
+    "@mui/x-date-pickers": "^7.28.3",
+    "@rcb-plugins/html-renderer": "^0.2.0",
+    "@tanstack/react-table": "^8.21.2",
+    "aos": "^2.3.4",
+    "axios": "^1.9.0",
+    "dayjs": "^1.11.13",
+    "dompurify": "^3.2.5",
+    "formik": "^2.4.6",
+    "framer-motion": "^12.7.5",
+    "lenis": "^1.2.3",
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-chatbotify": "^2.0.0-beta.32",
+    "react-dom": "^19.0.0",
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.56.2",
+    "react-toastify": "^11.0.5",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/aos": "^3.0.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5"
+  }
+}

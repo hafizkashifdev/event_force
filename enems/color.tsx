@@ -1,0 +1,20 @@
+export enum Color {
+  primaryMain = "#39BCA9",
+  TextMain = "#000000",
+  TextSecondary = "#3C4A47",
+  commonWhite = "#FFFFFF",
+  TextGreen = "#083C2F",
+  circleText="##F0F5F4",
+  DarkBlack = "#1F2937",
+  Grey = "#6B7280",
+  borderColor = "#E0E0E0",
+  LightGrey = "#E0E5E4",
+  ShockingRed = "#FF0000",
+  textGray = "#5B6A66",
+  textLightGray = "#737B79",
+  darkGreen="",
+  bgColor="#F0F5F4",
+  lightGraySecondary = "#F0F5F4",
+  TextGrayMedium = "#7F8C89",
+  blacked="#585858"
+}

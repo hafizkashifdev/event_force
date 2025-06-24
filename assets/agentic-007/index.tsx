@@ -1,0 +1,13 @@
+export { default as agenticChatBot } from "./image 124.png";
+export { default as agenticBenifitsIcon } from "./Frame 1410088966.png";
+export { default as agenticBenifitsIcon1 } from "./Frame 1410088967.png";
+export { default as agenticBenifitsIcon2 } from "./Frame 1410088968.png";
+export { default as agenticBenifitsIcon3 } from "./Frame 1410088969.png";
+export { default as agenticBenifitsIcon4 } from "./Frame 1410088970.png";
+export { default as agenticBenifitsIcon5 } from "./Frame 1410088971.png";
+export { default as agenticWorksImage } from "./image 131.png";
+export { default as agenticRoleImage } from "./image 132.png";
+export { default as agenticDesicionImage } from "./image 82.png";
+export { default as agenticDesicionImage1 } from "./image 133.png";
+export { default as agenticDesicionImage2 } from "./image 82 (1).png";
+export { default as agenticFooterImage2 } from "./Photo by Raul Miranda.png";

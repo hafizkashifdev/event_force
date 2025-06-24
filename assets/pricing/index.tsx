@@ -1,0 +1,1 @@
+export { default as PricingCheckboxIcon } from "./checkbox.svg";
