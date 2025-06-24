@@ -81,7 +81,7 @@ const Benefits = () => {
               mt: "16px",
             }}
           >
-            At Agentic Creed, we recognise the importance of managing your time
+            At Event Force, we recognise the importance of managing your time
             effectively. That’s why we’ve introduced Meetings, a smart scheduling
             tool designed to streamline how you organise appointments, enhance
             productivity, and improve the client experience.

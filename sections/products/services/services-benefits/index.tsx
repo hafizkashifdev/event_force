@@ -67,7 +67,7 @@ export const ServicesBenefits = () => {
                 fontWeight={FontWeight?.SemiBold}
                 color={Color.TextGreen}
               >
-                Benefits of Agentic Creed Services
+                Benefits of Event Force Services
               </Typography>
             </Box>
             <Box>
@@ -77,7 +77,7 @@ export const ServicesBenefits = () => {
                 my={3}
                 lineHeight="28px"
               >
-                Agentic Creed Services is a comprehensive service management
+                Event Force Services is a comprehensive service management
                 solution designed to streamline operations, enhance client
                 satisfaction, and optimise service delivery. With automated
                 workflows, task tracking, and data-driven insights, businesses

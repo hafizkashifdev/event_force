@@ -54,7 +54,7 @@ const Schedule = () => {
               mt: "16px",
             }}
           >
-            Unlock smarter scheduling with Meetings by Agentic Creed. Our
+            Unlock smarter scheduling with Meetings by Event Force. Our
             intuitive features and automated tools are built to simplify bookings,
             improve client experiences, and save you valuable time, no matter your
             role or business size.

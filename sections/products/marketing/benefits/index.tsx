@@ -72,7 +72,7 @@ export const Benefits = () => {
           fontWeight={FontWeight?.SemiBold}
           color={Color.TextGreen}
         >
-          Benefits of Marketing by Agentic Creed
+          Benefits of Marketing by Event Force
         </Typography>
         <Typography variant="subtitle1" color={Color.TextSecondary} my={1}>
           Unlock your marketing potential with a powerful platform designed to

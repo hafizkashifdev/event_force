@@ -86,7 +86,7 @@ export const ContractsSolution = () => {
               color={Color.TextGreen}
               mt={3}
             >
-              How Agentic Creed Contracts Works
+              How Event Force Contracts Works
             </Typography>
           </Grid>
           <Grid

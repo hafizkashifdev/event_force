@@ -38,7 +38,7 @@ const HeroSection = () => {
                 color: Color.TextSecondary,
               }}
             >
-              At Agentic Creed, we believe in empowering businesses with
+              At Event Force, we believe in empowering businesses with
               intelligent automation and streamlined solutions. We are a
               next-generation CRM and business management platform, designed to
               bring efficiency, productivity, and seamless collaboration across

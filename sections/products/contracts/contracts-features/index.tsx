@@ -84,7 +84,7 @@ export const ContractFeatures = () => {
             Creed!
           </Typography>
           <Typography variant="subtitle1" color={Color.TextSecondary} my={1}>
-            Agentic Creed Contracts simplifies contract management by
+            Event Force Contracts simplifies contract management by
             streamlining the entire lifecycle, from creation to execution.
             Whether handling sales agreements, corporate contracts, or rental
             agreements, the system ensures accuracy, efficiency, and compliance.

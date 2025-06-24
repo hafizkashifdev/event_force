@@ -71,7 +71,7 @@ export const ServicesGoalsSection = () => {
                 lineHeight="28px"
               >
                 Maximise your service efficiency with a streamlined strategy.
-                Agentic Creed helps you optimise operations, automate processes,
+                Event Force helps you optimise operations, automate processes,
                 and improve customer satisfaction.
               </Typography>
             </Box>

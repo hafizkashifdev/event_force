@@ -41,7 +41,7 @@ export const TakeOurWord = () => {
             Don’t Just Take Our Word for It
           </Typography>
           <Typography variant="subtitle1" color={Color.TextSecondary} my={1}>
-            We’ve designed Agentic Creed to empower businesses at every stage of
+            We’ve designed Event Force to empower businesses at every stage of
             their journey. With innovative solutions and seamless automation,
             we’re committed to delivering exceptional results that drive growth
             and success.

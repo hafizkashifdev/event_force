@@ -31,11 +31,11 @@ export const GetStarted = () => {
           fontWeight={FontWeight?.SemiBold}
           color={Color.TextGreen}
         >
-          Get Started with Agentic Creed
+          Get Started with Event Force
         </Typography>
         <Typography variant="subtitle1" color={Color.TextSecondary} my={1}>
           We have designed our solutions to empower businesses and professionals
-          at every stage. Agentic Creed provides the fastest and most efficient
+          at every stage. Event Force provides the fastest and most efficient
           way to manage sales, customers, and operations seamlessly.
         </Typography>
         <LinkButton

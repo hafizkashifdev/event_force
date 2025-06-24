@@ -85,7 +85,7 @@ export const OperationManagerMessage = () => {
                   lineHeight="34px"
                   fontWeight={FontWeight?.SemiBold}
                 >
-                  “Integrating Agentic Creed has transformed our call centre
+                  “Integrating Event Force has transformed our call centre
                   operations. The PowerDialler has helped us reach more leads,
                   and our response times have drastically improved. We're
                   closing deals faster than ever!”
@@ -113,7 +113,7 @@ export const OperationManagerMessage = () => {
       <HeroBox>
         <Container maxWidth="xl">
           <FooterCard
-            title="Get Started with Agentic Creed"
+            title="Get Started with Event Force"
             subTitle=""
             desc="Join thousands of businesses using smart solutions to streamline marketing, sales, customer service, and operations."
             hasHighlightedText={false}

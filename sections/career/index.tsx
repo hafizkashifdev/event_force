@@ -40,7 +40,7 @@ const Career = () => {
                     mb: "50px",
                   }}
                 >
-                  At Agentic Creed, we believe in innovation, collaboration, and
+                  At Event Force, we believe in innovation, collaboration, and
                   limitless possibilities. Our team is passionate about empowering
                   businesses with cutting-edge CRM solutions, and we are always
                   looking for talented professionals who share our vision. If you’re

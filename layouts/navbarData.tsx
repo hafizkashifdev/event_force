@@ -30,7 +30,7 @@ export const pagesNavbarData = [
   },
   {
     id: 4,
-    title: "Pricing",
+    title: "services",
     link: Routes.PRICING,
   },
   {

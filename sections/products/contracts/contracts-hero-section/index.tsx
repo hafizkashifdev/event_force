@@ -52,7 +52,7 @@ export const ContractsHeroSection = () => {
               lineHeight="28px"
             >
               Tired of complex paperwork, delays, and contract mismanagement?
-              With Agentic Creed Contracts, you can create, manage, and automate
+              With Event Force Contracts, you can create, manage, and automate
               contracts in a fully digital ecosystem. Whether you’re handling
               corporate deals, rental agreements, HR contracts, or private
               transactions, our system ensures security, compliance, and

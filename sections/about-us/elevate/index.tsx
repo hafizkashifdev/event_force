@@ -16,7 +16,7 @@ const Elevate = () => {
     <HeroBox>
       <Container maxWidth="xl" data-aos="fade-up">
         <FooterCard
-          title="Elevate Your Business with Agentic Creed!"
+          title="Elevate Your Business with Event Force!"
           desc="The all-in-one intelligent platform to streamline sales, services, marketing, and operations for ultimate business success!"
           hasHighlightedText={false}
           hasBtn={true}

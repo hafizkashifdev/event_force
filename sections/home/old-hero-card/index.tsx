@@ -72,7 +72,7 @@ export const OldHeroCard = () => {
                     <Box>
                       <Typography variant="h2" color="#fff" fontWeight={700}>
                         <Box component={"span"} color={Color.primaryMain}>
-                          Agentic Creed –
+                          Event Force –
                         </Box>
                         Elevate Your Business with Smart CRM Solutions
                       </Typography>
@@ -82,7 +82,7 @@ export const OldHeroCard = () => {
                         mt={2}
                         fontSize={18}
                       >
-                        Welcome to Agentic Creed, the future of intelligent
+                        Welcome to Event Force, the future of intelligent
                         customer engagement. Our cutting-edge CRM platform is
                         designed to simplify your workflows, automate
                         operations, and provide data-driven insights—helping

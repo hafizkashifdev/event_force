@@ -68,7 +68,7 @@ const Meetings = () => {
                   maxWidth: '1100px',
                 }}
               >
-                Meetings is a powerful feature within Agentic Creed, designed to
+                Meetings is a powerful feature within Event Force, designed to
                 give you full control over your scheduling. Whether you're setting
                 up client calls, team meetings, or one-to-one sessions, it
                 simplifies the process and keeps your calendar well-organised.

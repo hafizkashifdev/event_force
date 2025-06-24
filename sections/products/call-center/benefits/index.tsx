@@ -61,13 +61,13 @@ export const BenefitsSection = () => {
         data-aos="fade-up"
       >
         <Tooltip
-          title="How Agentic Creed Call Centre Empowers Your Business"
+          title="How Event Force Call Centre Empowers Your Business"
           placement="top"
           enterTouchDelay={0}
           leaveTouchDelay={3000}
         >
           <Chip
-            label="How Agentic Creed Call Centre Empowers Your Business"
+            label="How Event Force Call Centre Empowers Your Business"
             sx={{
               color: Color?.commonWhite,
               backgroundColor: Color.primaryMain,

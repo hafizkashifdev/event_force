@@ -118,7 +118,7 @@ const PartnerWithUs = () => {
                 onBlur={formik.handleBlur}
                 error={formik.touched.companyName && Boolean(formik.errors.companyName)}
                 helperText={formik.touched.companyName && formik.errors.companyName}
-                placeholder='e.g. Agentic Creed'
+                placeholder='e.g. Event Force'
                 sx={styles.textFieldStyles}
 
               />

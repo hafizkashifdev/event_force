@@ -87,10 +87,10 @@ const TermsAndConditionsSection = () => {
 
         <SectionTitle>1. Introduction</SectionTitle>
         <Paragraph>
-          Agentic Creed is a business management platform designed to optimise
+          Event Force is a business management platform designed to optimise
           customer engagement, marketing automation, service management,
           operations, loyalty programs, and business analytics. These Terms &
-          Conditions govern your use of Agentic Creed's website, platform,
+          Conditions govern your use of Event Force's website, platform,
           mobile application, and related services.
         </Paragraph>
         <Paragraph>By using our services, you agree to:</Paragraph>
@@ -100,21 +100,21 @@ const TermsAndConditionsSection = () => {
           <Li>Use the platform responsibly and ethically.</Li>
         </Ul>
         <Paragraph>
-          If you do not agree, you must discontinue using Agentic Creed
+          If you do not agree, you must discontinue using Event Force
           immediately.
         </Paragraph>
 
         <SectionTitle>2. Definitions</SectionTitle>
         <Ul>
           <Li>
-            "Platform" – The Agentic Creed website, software, mobile
+            "Platform" – The Event Force website, software, mobile
             applications, and related services.
           </Li>
           <Li>
-            "User" – Any individual or entity accessing or using Agentic Creed.
+            "User" – Any individual or entity accessing or using Event Force.
           </Li>
           <Li>
-            "We," "Us," "Our" – Refers to Agentic Creed and its affiliated
+            "We," "Us," "Our" – Refers to Event Force and its affiliated
             entities.
           </Li>
           <Li>
@@ -123,12 +123,12 @@ const TermsAndConditionsSection = () => {
           </Li>
           <Li>
             "Content" – Any data, text, graphics, images, videos, or other
-            materials provided through Agentic Creed.
+            materials provided through Event Force.
           </Li>
         </Ul>
 
         <SectionTitle>3. Eligibility</SectionTitle>
-        <Paragraph>To use Agentic Creed, you must:</Paragraph>
+        <Paragraph>To use Event Force, you must:</Paragraph>
         <Ul>
           <Li>
             Be at least 18 years old (or have parental consent if required).
@@ -169,7 +169,7 @@ const TermsAndConditionsSection = () => {
 
         <SectionTitle>5. Permitted Use</SectionTitle>
         <Paragraph>
-          You agree to use Agentic Creed only for lawful purposes, including:
+          You agree to use Event Force only for lawful purposes, including:
         </Paragraph>
         <Ul>
           <Li>
@@ -180,7 +180,7 @@ const TermsAndConditionsSection = () => {
         </Ul>
         <SectionTitle>5. Permitted Use</SectionTitle>
         <Paragraph>
-          You agree to use Agentic Creed only for lawful purposes, including:
+          You agree to use Event Force only for lawful purposes, including:
         </Paragraph>
         <Ul>
           <Li>
@@ -232,7 +232,7 @@ const TermsAndConditionsSection = () => {
 
         <SectionTitle>8. Intellectual Property</SectionTitle>
         <Paragraph>
-          All logos, content, features, and trademarks of Agentic Creed remain
+          All logos, content, features, and trademarks of Event Force remain
           our property.
         </Paragraph>
         <Paragraph>
@@ -268,7 +268,7 @@ const TermsAndConditionsSection = () => {
         <SectionTitle>11. Limitation of Liability</SectionTitle>
         <Ul>
           <Li>
-            Agentic Creed is not liable for indirect, incidental, or
+            Event Force is not liable for indirect, incidental, or
             consequential damages.
           </Li>
           <Li>
@@ -279,7 +279,7 @@ const TermsAndConditionsSection = () => {
 
         <SectionTitle>12. Indemnification</SectionTitle>
         <Paragraph>
-          You agree to defend, indemnify, and hold Agentic Creed harmless
+          You agree to defend, indemnify, and hold Event Force harmless
           against claims arising from:
         </Paragraph>
         <Ul>
@@ -329,13 +329,13 @@ const TermsAndConditionsSection = () => {
         <SectionTitle>15. Changes to Terms & Conditions</SectionTitle>
         <Paragraph>
           We reserve the right to update these Terms & Conditions at any time.
-          Continued use of Agentic Creed after modifications constitutes
+          Continued use of Event Force after modifications constitutes
           acceptance of the new terms.
         </Paragraph>
         <SectionTitle>15. Changes to Terms & Conditions</SectionTitle>
         <Paragraph>
           We reserve the right to update these Terms & Conditions at any time.
-          Continued use of Agentic Creed after modifications constitutes
+          Continued use of Event Force after modifications constitutes
           acceptance of the new terms.
         </Paragraph>
 
@@ -345,7 +345,7 @@ const TermsAndConditionsSection = () => {
           <Li>📩 Email: support@agenticcreed.com</Li>
         </Ul>
         <Paragraph>
-          By using Agentic Creed, you agree to these Terms & Conditions and
+          By using Event Force, you agree to these Terms & Conditions and
           acknowledge your responsibility to comply with them.
         </Paragraph>
         <FooterCard

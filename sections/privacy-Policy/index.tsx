@@ -94,7 +94,7 @@ export default function PrivacyPolicySection() {
 
         <SectionTitle>Introduction</SectionTitle>
         <Paragraph>
-          At Agentic Creed, we are committed to protecting your privacy while
+          At Event Force, we are committed to protecting your privacy while
           providing a seamless and efficient business management platform. Our
           advanced CRM solution integrates Operations, Loyalty, Marketing,
           Services, Call Centre, Meetings, Customer Portal, Asset Management,
@@ -104,7 +104,7 @@ export default function PrivacyPolicySection() {
         <Paragraph>
           This Privacy Policy explains how we collect, use, protect, and share
           your information to ensure transparency and compliance with global
-          data protection regulations. By using Agentic Creed, you acknowledge
+          data protection regulations. By using Event Force, you acknowledge
           and agree to the practices outlined in this policy.
         </Paragraph>
         <SectionTitle>1. Information We Collect</SectionTitle>
@@ -124,7 +124,7 @@ export default function PrivacyPolicySection() {
         <Paragraph>We use collected data to:</Paragraph>
         <List
           items={[
-            "Deliver and enhance Agentic Creed’s CRM and business solutions.",
+            "Deliver and enhance Event Force’s CRM and business solutions.",
             "Customise the user experience with personalised dashboards and recommendations.",
             "Process transactions, manage accounts, and improve service efficiency.",
             "Communicate important updates, security alerts, and promotional content (with user consent).",
@@ -156,7 +156,7 @@ export default function PrivacyPolicySection() {
         />
         <SectionTitle>5. Your Data Privacy Rights</SectionTitle>
         <Paragraph>
-          As a user of Agentic Creed, you have the right to:
+          As a user of Event Force, you have the right to:
         </Paragraph>
         <List
           items={[
@@ -194,7 +194,7 @@ export default function PrivacyPolicySection() {
         </Paragraph>
         <Paragraph> Email:[support@company.com]</Paragraph>
         <Paragraph>
-          By using Agentic Creed, you consent to this Privacy Policy. We
+          By using Event Force, you consent to this Privacy Policy. We
           prioritise your privacy and are dedicated to maintaining the highest
           security standards.
         </Paragraph>

@@ -67,7 +67,7 @@ export const CallCenterHeroSection = () => {
               fontSize={FontSize?.ExtraLarge}
               fontWeight={FontWeight?.Regular}
             >
-              Welcome to Agentic Creed, the ultimate call centre solution
+              Welcome to Event Force, the ultimate call centre solution
               designed to enhance sales and customer interactions. Our platform
               empowers you to elevate customer experiences, streamline
               workflows, and drive revenue growth.
@@ -83,7 +83,7 @@ export const CallCenterHeroSection = () => {
             >
               Your call centre is the lifeblood of your business—engaging
               customers, building relationships, and increasing sales. With
-              Agentic Creed, you gain access to powerful, AI-driven tools that
+              Event Force, you gain access to powerful, AI-driven tools that
               optimise performance and deliver exceptional service at every
               touchpoint.
             </Typography>

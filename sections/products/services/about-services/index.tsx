@@ -58,13 +58,13 @@ export const AboutServices = () => {
         }}
       >
         <Tooltip
-          title="10,000+ Businesses Trust Agentic Creed Services"
+          title="10,000+ Businesses Trust Event Force Services"
           placement="top"
           enterTouchDelay={0}
           leaveTouchDelay={3000}
         >
           <Chip
-            label="10,000+ Businesses Trust Agentic Creed Services"
+            label="10,000+ Businesses Trust Event Force Services"
             sx={{
               color: Color?.commonWhite,
               backgroundColor: Color.primaryMain,

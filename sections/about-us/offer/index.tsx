@@ -85,7 +85,7 @@ const Offer = () => {
                   mt: "24px",
                 }}
               >
-                Agentic Creed is a fully integrated business suite, offering a
+                Event Force is a fully integrated business suite, offering a
                 range of tools designed to optimise different business operations.
               </Typography>
             </Box>

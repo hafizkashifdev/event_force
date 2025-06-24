@@ -74,7 +74,7 @@ export const LoyaltyProgram = () => {
             appreciate your customers, turning their satisfaction into lasting
             commitment. By leveraging data-driven insights, you can optimise
             your strategy, boost retention, and maximise customer lifetime value
-            all with Agentic Creed..
+            all with Event Force..
           </Typography>
           <LinkButton
             link="/contact"

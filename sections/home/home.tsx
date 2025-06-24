@@ -25,6 +25,8 @@ import { animate, motion, useMotionValue } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { HeroCard } from "./hero-card";
+import Image from "next/image";
+import { introductionImage } from "@assets/home";
 
 const CustomUl2 = styled("ul")`
   li::marker {
@@ -146,9 +148,9 @@ const circleStyle = {
 };
 
 function HomeSections() {
-  const count = useMotionValue(0); // Motion value
-  const [displayCount, setDisplayCount] = useState(0); // React state for rendering
-  const reviews = useMotionValue(100); // Motion value
+  const count = useMotionValue(0);
+  const [displayCount, setDisplayCount] = useState(0);
+  const reviews = useMotionValue(100);
   const [reviewsCount, setReviewsCount] = useState(0); // React state for rendering
 
   useEffect(() => {
@@ -190,98 +192,62 @@ function HomeSections() {
         }}
       >
         <Box
-          sx={{
-            backgroundImage: { xs: "none", md: `url('homeback.svg')` },
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "50%",
-            backgroundPositionX: "140%",
-            backgroundPositionY: "70%",
-          }}
+        // sx={{
+        //   backgroundImage: { xs: "none", md: `url('homeback.svg')` },
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "50%",
+        //   backgroundPositionX: "140%",
+        //   backgroundPositionY: "70%",
+        // }}
         >
           <HeroCard />
         </Box>
       </Box>
       <HeroBox>
-        <Container data-aos="fade-down" maxWidth="xl" sx={{ py: 6 }}>
-          <Grid size={12} mt={2}>
+        <Container data-aos="fade-down" maxWidth="xl" sx={{ py: 0 }}>
+          <Grid size={12}>
             <Stack>
               <Stack
                 flexDirection={"row"}
-                gap={2}
+                gap={1}
                 justifyContent={"center"}
-                my={5}
+                my={1}
               >
                 <Typography variant="h2" color={Color.TextGreen}>
-                  Why Choose Agentic Creed?
+                  Premium Event Mobility and Logistics
                 </Typography>
               </Stack>
-              <Grid container spacing={0}>
-                {ACCardData.map((item, index) => (
-                  <Grid
-                    data-aos="fade-up"
-                    key={index}
-                    size={{ xs: 12, sm: 6, md: 4, lg: 4 }}
-                    sx={{
-                      // borderLeft: `1px solid ${Color.LightGrey}`,
-                      borderRight: {
-                        xs: "unset",
-                        lg: `1px solid ${Color.LightGrey}`,
-                      },
-                      borderBottom: {
-                        xs: "unset",
-                        lg: `1px solid ${Color.LightGrey}`,
-                      },
-                      // Remove the right border for the last item in each row
-                      "&:nth-of-type(3n)": {
-                        borderRight: { lg: "none" },
-                      },
-                      // Remove the bottom border for the last row
-                      "&:nth-last-of-type(-n+3)": {
-                        borderBottom: { lg: "none" },
-                      },
-                    }}
-                  >
-                    <Paper
-                      variant="elevation"
-                      elevation={0}
-                      sx={{
-                        height: 200,
-                        mb: 3,
-                      }}
-                    >
-                      <Stack px={4} py={4} gap={1}>
-                        <Typography
-                          variant="h2"
-                          color={Color.primaryMain}
-                          fontSize={FontSize.Huge}
-                          fontWeight={700}
-                        >
-                          {item.title}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color={Color.textGray}
-                          fontSize={FontSize.Huge}
-                          fontWeight={FontWeight.SemiBold}
-                        >
-                          {item.smTitle}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color={Color.textLightGray}
-                          fontSize={FontSize.Large}
-                        >
-                          {item.sb}
-                        </Typography>
-                      </Stack>
-                    </Paper>
-                  </Grid>
-                ))}
-              </Grid>
+             
             </Stack>
           </Grid>
+          <Grid size={{ xs: 12, md: 6 }}>
+              <Stack gap={2} flexDirection={"row"} alignItems="center">
+                <Typography
+                  variant="h3"
+                  fontSize={40}
+                  color={'red'}
+                >
+                  Trusted by Thousands of Businesses Worldwide{" "}
+                </Typography>
+              </Stack>
+            </Grid>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Image
+                src={introductionImage}
+                alt="image"
+                style={{
+                  maxWidth: "auto",
+                  width: "450px",
+                  height:"auto",
+                  objectFit: "contain",
+                }}
+              />
+            </Grid>
         </Container>
       </HeroBox>
+      <Container data-aos="fade-down" maxWidth="xl" sx={{ py: 0 }}>
+            
+          </Container>
       <HeroBox>
         <Grid
           data-aos="fade-down"
@@ -300,6 +266,8 @@ function HomeSections() {
               </Typography>
             </Stack>
           </Grid>
+          
+
           <Grid size={{ xs: 12, md: 6 }}>
             <Stack
               gap={2}
@@ -376,7 +344,7 @@ function HomeSections() {
             color={Color.TextGreen}
             gutterBottom
           >
-            Agentic Creed – Powering Every Business Function
+            Event Force – Powering Every Business Function
           </Typography>
           <Box
             sx={{
@@ -694,7 +662,7 @@ function HomeSections() {
               >
                 We provide cutting-edge solutions to help your startup scale
                 effortlessly. With seamless integrations and powerful analytics,
-                Agentic Creed ensures smooth operations at every stage of
+                Event Force ensures smooth operations at every stage of
                 growth.{" "}
               </Typography>
             </Stack>
@@ -718,8 +686,8 @@ function HomeSections() {
                 color={Color.TextGreen}
               >
                 Discover how businesses are transforming their operations with
-                Agentic Creed. Our solutions empower teams, boost efficiency,
-                and drive measurable results.{" "}
+                Event Force. Our solutions empower teams, boost efficiency, and
+                drive measurable results.{" "}
               </Typography>
               <Button
                 variant="contained"
@@ -882,7 +850,7 @@ function HomeSections() {
                   picUrl: "c3.png",
                   title: "Success Stories Revealed",
                   description:
-                    "Discover how businesses thrive with Agentic Creed’s expertise.",
+                    "Discover how businesses thrive with Event Force’s expertise.",
                   btnText: "Success Stories",
                 },
               ].map(({ title, picUrl, description, btnText }, index) => (
@@ -950,7 +918,7 @@ function HomeSections() {
               fontWeight={FontWeight.SemiBold}
               color={Color.TextGreen}
             >
-              Get Started with Agentic Creed
+              Get Started with Event Force
             </Typography>
             <Typography
               variant="h2"
@@ -959,8 +927,8 @@ function HomeSections() {
               color={Color.TextGreen}
             >
               We have designed our solutions to empower businesses and
-              professionals at every stage. Agentic Creed provides the fastest
-              and most efficient way to manage sales, customers, and operations
+              professionals at every stage. Event Force provides the fastest and
+              most efficient way to manage sales, customers, and operations
               seamlessly.{" "}
             </Typography>
             <Button

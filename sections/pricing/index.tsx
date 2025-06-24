@@ -44,7 +44,7 @@ const Pricing = () => {
                 color: Color?.TextGreen,
               }}
             >
-              Pricing Plans of Agentic Creed Products
+              Pricing Plans of Event Force Products
             </Typography>
           </Grid>
           <Grid size={{ xs: 12, md: 8 }}>

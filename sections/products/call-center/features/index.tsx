@@ -100,7 +100,7 @@ export const CallCenterFeatures = () => {
               my={3}
               lineHeight="28px"
             >
-              Unlock the full potential of your call centre with Agentic Creed’s
+              Unlock the full potential of your call centre with Event Force’s
               powerful, cutting-edge features designed to enhance productivity,
               customer satisfaction, and sales performance. From real-time
               insights to seamless call management, our platform equips you with

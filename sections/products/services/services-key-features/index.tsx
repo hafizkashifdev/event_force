@@ -122,7 +122,7 @@ export const ServicesKeyFeatures = () => {
           fontWeight={FontWeight?.SemiBold}
           color={Color.TextGreen}
         >
-          Key Features of Agentic Creed Services
+          Key Features of Event Force Services
         </Typography>
         <Typography  fontSize={FontSize?.ExtraLarge} color={Color.TextSecondary} my={1}>
           Streamline service operations with efficient request management,

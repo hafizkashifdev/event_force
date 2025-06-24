@@ -8,7 +8,7 @@ export const LoyaltySection = () => {
       <LoyaltyProgram />
       <LoyaltyBenefits />
       <FooterCard
-        title="Get Started with Agentic Creed"
+        title="Get Started with Event Force"
         desc="Join thousands of businesses using smart solutions to streamline marketing, sales, customer service, and operations."
         hasHighlightedText={false}
         hasBtn={true}

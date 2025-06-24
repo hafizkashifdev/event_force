@@ -68,7 +68,7 @@ export const SalesTrusted = () => {
                   fontWeight={FontWeight?.SemiBold}
                   color={Color.TextGreen}
                 >
-                  Agentic Creed is Trusted Sales Professionals Worldwide
+                  Event Force is Trusted Sales Professionals Worldwide
                 </Typography>
               </Box>
               <Box>

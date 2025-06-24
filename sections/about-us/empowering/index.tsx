@@ -13,7 +13,7 @@ const Empowering = () => {
       id: 1,
       title: "Key Clients & Partners",
       description:
-        "Showcase leading businesses or partners leveraging Agentic Creed.",
+        "Showcase leading businesses or partners leveraging Event Force.",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Empowering = () => {
       id: 3,
       title: "Customer Success Stories",
       description:
-        " Display real users benefiting from Agentic Creed’s solutions.",
+        " Display real users benefiting from Event Force’s solutions.",
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ const Empowering = () => {
                 maxWidth: '523px',
               }}
             >
-              Meet the pioneers driving success with Agentic Creed. From
+              Meet the pioneers driving success with Event Force. From
               top-performing users and trusted partners to industry experts,
               discover the minds leveraging our intelligent solutions to
               streamline operations, enhance customer engagement, and accelerate

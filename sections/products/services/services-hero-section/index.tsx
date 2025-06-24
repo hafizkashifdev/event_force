@@ -51,7 +51,7 @@ export const ServicesHeroSection = () => {
                 lineHeight="28px"
               >
                 Welcome to Services, the ultimate customer service and support
-                solution by Agentic Creed. Designed to streamline customer
+                solution by Event Force. Designed to streamline customer
                 interactions, automate workflows, and provide top-tier support,
                 Services empowers businesses to enhance customer satisfaction
                 while maintaining efficiency.

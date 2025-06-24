@@ -111,7 +111,7 @@ const Contact = () => {
             }}
           >
             Whether you have a question, need support, or want to explore how
-            Agentic Creed can help grow your business we’re here to help. Fill
+            Event Force can help grow your business we’re here to help. Fill
             out the form below or reach out through the contact details
             provided. Our team will get back to you as soon as possible.
           </Typography>
@@ -230,7 +230,7 @@ const Contact = () => {
                 helperText={
                   formik.touched.companyName && formik.errors.companyName
                 }
-                placeholder="e.g. Agentic Creed"
+                placeholder="e.g. Event Force"
                 sx={styles.textFieldStyles}
               />
             </Box> */}

@@ -90,7 +90,7 @@ export const OperationBenefits = () => {
           color={Color?.TextSecondary}
           mt={1.5}
         >
-          Operations by Agentic Creed is your reliable partner in achieving
+          Operations by Event Force is your reliable partner in achieving
           operational excellence. Designed to enhance efficiency, boost
           productivity, and enable seamless collaboration, our solution empowers
           organisations to optimise workflows and drive business success. With

@@ -42,7 +42,7 @@ export const ReadyStreamLineOperations = () => {
             </Typography>
             <Typography variant="subtitle1" color={Color.LightGrey} my={1}>
               Optimise your workflows and boost team efficiency with Operations
-              by Agentic Creed. From task management to automation and
+              by Event Force. From task management to automation and
               collaboration, our smart solutions help you simplify processes and
               drive productivity across your organisation.
             </Typography>

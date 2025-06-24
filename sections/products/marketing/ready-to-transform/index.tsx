@@ -47,7 +47,7 @@ export const ReadyToTransform = () => {
                 my={1}
               >
                 Unlock the full potential of your marketing efforts with
-                Marketer by Agentic Creed. Our cutting-edge features and
+                Marketer by Event Force. Our cutting-edge features and
                 dedicated support are designed to drive impactful results, no
                 matter the size of your business.
               </Typography>

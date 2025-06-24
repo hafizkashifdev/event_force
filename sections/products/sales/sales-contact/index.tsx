@@ -69,7 +69,7 @@ export const SalesContact = () => {
             my={1}
             lineHeight="28px"
           >
-            Welcome to Sales, the cutting-edge sales solution by Agentic Creed.
+            Welcome to Sales, the cutting-edge sales solution by Event Force.
             Designed to empower sales teams, streamline processes, and drive
             remarkable growth, Sales is packed with powerful tools to help you
             manage leads, close deals, and build lasting customer relationships.

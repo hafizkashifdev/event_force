@@ -23,7 +23,7 @@ export const ContractsSection = () => {
       <Container maxWidth="xl">
       <FooterCard
         title="Streamline Your Contracts: Secure, Efficient, and Hassle-Free"
-        desc="Effortlessly manage, automate, and track contracts with Agentic Creed for seamless business operations."
+        desc="Effortlessly manage, automate, and track contracts with Event Force for seamless business operations."
         hasHighlightedText={false}
         hasBtn={true}
       />

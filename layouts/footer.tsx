@@ -52,7 +52,7 @@ function Footer() {
                   textAlign={{ xs: "center", md: "unset" }}
                 >
                   Welcome to the future of intelligent business solutions.
-                  Agentic Creed is your all-in-one platform, built to optimise
+                  Event Force is your all-in-one platform, built to optimise
                   CRM, ITSM, marketing, and sales operations efficiently.
                 </Typography>
               </Stack>
@@ -173,7 +173,7 @@ function Footer() {
            
             >
               <Typography variant="body1" color="initial">
-                © 2025 Agentic Creed All Rights Reserved
+                © 2025 Event Force All Rights Reserved
               </Typography>
               <Stack flexDirection={"row"} gap={2}>
                 <IconButton

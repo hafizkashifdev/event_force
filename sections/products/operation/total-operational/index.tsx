@@ -87,12 +87,12 @@ export const TotalOperational = () => {
               >
                 Bring every aspect of your operations together for a more
                 connected, productive business. <br />
-                <br /> Agentic Creed empowers you to manage your entire
+                <br /> Event Force empowers you to manage your entire
                 operational ecosystem from one unified platform. From task
                 delegation and document handling to workflow automation and team
                 collaboration everything is seamlessly connected. No more
                 juggling between multiple tools or chasing disconnected
-                processes. With Agentic Creed, you gain full visibility, better
+                processes. With Event Force, you gain full visibility, better
                 control, and the flexibility to adapt as your business grows.
               </Typography>
             </Box>

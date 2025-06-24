@@ -19,18 +19,6 @@ export const HeroCard = () => {
                   height: "100%",
                 }}
               >
-                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                  <Chip
-                    sx={{
-                      backgroundColor: Color?.primaryMain,
-                      color: Color?.commonWhite,
-                      lineHeight: "24px",
-                      letterSpacing: "0.7px",
-                      fontWeight: FontWeight?.SemiBold,
-                    }}
-                    label="Automate & Scale Effortlessly"
-                  />
-                </Box>
                 <Box sx={{ marginY: 2 }}>
                   <Typography
                     sx={{
@@ -41,7 +29,7 @@ export const HeroCard = () => {
                       color: Color?.TextGreen,
                     }}
                   >
-                    Elevate Your Business with Smart CRM Solutions
+                    Driving Your Events to Success
                   </Typography>
                 </Box>
                 <Typography
@@ -53,11 +41,11 @@ export const HeroCard = () => {
                     color: "#697C77",
                   }}
                 >
-                  Welcome to Agentic Creed, the future of intelligent customer
-                  engagement. Our cutting-edge CRM platform is designed to
-                  simplify your workflows, automate operations, and provide
-                  data-driven insights—helping your business thrive
-                  effortlessly.
+                  Premier transportation & logistics for high-profile events in
+                  Saudi Arabia. From luxury chauffeurs to large fleets, we
+                  ensure seamless, professional service so you can focus on your
+                  event. Trusted by top-tier clients for reliability and
+                  excellence.{" "}
                 </Typography>
                 <br />
                 <Box
@@ -83,7 +71,7 @@ export const HeroCard = () => {
                         padding: "1rem",
                       }}
                     >
-                      Get Started For Free
+                      Explore Services
                     </Button>
                   </Link>
                 </Box>
@@ -105,7 +93,7 @@ export const HeroCard = () => {
                               color: Color?.primaryMain,
                             }}
                           >
-                            Run Smarter, Grow Faster
+                            Transparency{" "}
                           </Typography>
                           <Typography
                             sx={{
@@ -116,8 +104,8 @@ export const HeroCard = () => {
                               color: Color?.blacked,
                             }}
                           >
-                            Simplify your processes and boost <br /> performance
-                            with intelligent, unified <br /> business tools.
+                            Through time, our honesty with the clients has
+                            accumulated valuable trust.
                           </Typography>
                         </SlideUpInView>
                       </Box>
@@ -137,7 +125,7 @@ export const HeroCard = () => {
                               color: Color?.primaryMain,
                             }}
                           >
-                            All-in-One Platform Built for <br /> Growth
+                            Reliability
                           </Typography>
                           <Typography
                             sx={{
@@ -148,8 +136,8 @@ export const HeroCard = () => {
                               color: Color?.blacked,
                             }}
                           >
-                            Connect sales, marketing, operations, and more{" "}
-                            <br /> in one seamless system for scalable success.
+                            We are committed to maintaining our high quality
+                            services and performance.
                           </Typography>
                         </SlideUpInView>
                       </Box>

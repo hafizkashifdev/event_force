@@ -8,9 +8,9 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Agentic Creed | All-in-One Business Growth Platform",
+  title: "Event Force | All-in-One Business Growth Platform",
   description:
-    "Agentic Creed – a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
+    "Event Force– a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
   // viewport: "initial-scale=1, width=device-width",
   icons: {
     icon: [
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Agentic Creed | All-in-One Business Growth Platform",
+    title: "Event Force | All-in-One Business Growth Platform",
     description:
-      "Agentic Creed – a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
+      "Event Force– a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
     url: "https://agenticcreed.ai/",
     type: "website",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "https://agenticcreed.ai/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Agentic Creed | All-in-One Business Growth Platform",
+        alt: "Event Force | All-in-One Business Growth Platform",
       },
     ],
   },

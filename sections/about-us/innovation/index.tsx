@@ -69,7 +69,7 @@ const Innovation = () => {
 
               }}
             >
-              At Agentic Creed, our commitment extends beyond just providing a CRM
+              At Event Force, our commitment extends beyond just providing a CRM
               solution—we strive to empower businesses, streamline operations, and
               enhance productivity through cutting-edge technology. Our dedication
               is built on three key pillars:

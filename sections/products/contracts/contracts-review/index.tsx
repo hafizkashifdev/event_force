@@ -30,7 +30,7 @@ const contractReviewData = [
     designation: "Operations Manager, TechMatter",
     star: 5,
     description:
-      '"Managing contracts has never been easier! Agentic Creed streamlined our entire agreement process, from creation to execution."',
+      '"Managing contracts has never been easier! Event Force streamlined our entire agreement process, from creation to execution."',
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const contractReviewData = [
     designation: "Legal Consultant, Apex Law Firm",
     star: 5,
     description:
-      '"The automation and tracking features of Agentic Creed Contracts saved us hours of work and ensured compliance at every step."',
+      '"The automation and tracking features of Event Force Contracts saved us hours of work and ensured compliance at every step."',
   },
 ];
 
@@ -87,7 +87,7 @@ export const ContractReview = () => {
             my={3}
             color={Color.TextGreen}
           >
-            What Our Clients Say About Agentic Creed Contracts
+            What Our Clients Say About Event Force Contracts
           </Typography>
         </Box>
         <Grid container spacing={8} my={10}>

@@ -37,7 +37,7 @@ const OurMission = () => {
                 mt: "24px",
               }}
             >
-              At Agentic Creed, we are dedicated to transforming businesses with
+              At Event Force, we are dedicated to transforming businesses with
               intelligent automation, seamless collaboration, and data-driven
               decision-making. Our goal is to eliminate inefficiencies, enhance
               customer engagement, and empower organisations with a fully
