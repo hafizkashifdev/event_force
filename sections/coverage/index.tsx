@@ -23,7 +23,7 @@ import { billEstimateData, pricingData } from "./pricing.data";
 import { useRouter } from "next/navigation";
 import FooterCard from "@components/footer-card";
 import HeroBox from "@components/hero-Box/hero-box";
-import { CoverImage1, CoverImage2 } from "@assets/coverage";
+import { CoverImage1, CoverImage2, CoverImage3 } from "@assets/coverage";
 import Image from "next/image";
 
 const coverage = () => {
@@ -68,39 +68,11 @@ const coverage = () => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ flexGrow: 1, p: 2, borderRadius: 2, border: '1px solid #e0e0e0' }}>
+        <Box sx={{}}>
       <Grid container spacing={2}>
         <Grid size={{xs:12,md:6}}>
-          <Card sx={{ borderRadius: 2, border: '1px solid #e0e0e0', textAlign: 'center', }}>
-            <CardContent>
-              <Box sx={{ bgcolor: '#26a69a', borderRadius: '50%', width: 60, height: 60, mx: 'auto', mt: 2, mb: 2 }}>
-                <Typography variant="h3" color="white" sx={{ lineHeight: '60px' }}>
-                  24
-                </Typography>
-              </Box>
-              <Typography variant="h6" component="div">
-                24/7 Operations Desk for real time support
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid size={{xs:12,md:6}}>
-          <Card sx={{ borderRadius: 2, border: '1px solid #e0e0e0', textAlign: 'center', }}>
-            <CardContent sx={{display:'flex'}}>
-              <Box sx={{ bgcolor: '#26a69a', borderRadius: '50%', width: 60, height: 60, mx: 'auto', mt: 2, mb: 2 }}>
-                <CheckCircleIcon sx={{ fontSize: 40, color: 'white', mt: 1 }} />
-              </Box>
-              <Typography variant="h6" component="div">
-                Nationwide reach across Riyadh, Jeddah, Dammam, Makkah, Madinah, Abha, and Tabuk
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-    </Box>
-        <Grid container spacing={4}>
-          <Grid size={{md:6,xs:12}}>
-            <Box display="flex" alignItems="center">
+          <Card sx={{ borderRadius: 8, border: '1px solid #e0e0e0', textAlign: 'center', background: 'transparent', boxShadow: 'none' }}>
+            <CardContent sx={{display:'flex',justifyContent:'center', alignItems:'center',padding: '20px'}}>
               <Box
                 sx={{
                   width: '60px',
@@ -115,71 +87,68 @@ const coverage = () => {
               >
                 <Typography variant="h6" color="#fff">24</Typography>
               </Box>
-              <Typography variant="body1">
+             <Typography variant="body1">
                 24/7 Operations Desk for real time support
               </Typography>
-            </Box>
-            <Box display="flex" alignItems="center" mt={2}>
-              <Box
-                sx={{
-                  width: '60px',
-                  height: '60px',
-                  borderRadius: '50%',
-                  background: '#67B6B2',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginRight: '20px',
-                }}
-              >
-                <Typography variant="h6" color="#fff">&#x1F510;</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid size={{xs:12,md:6}}>
+          <Card sx={{ borderRadius: 2, border: '1px solid #e0e0e0', textAlign: 'center', }}>
+            <CardContent sx={{display:'flex',justifyContent:'center', alignItems:'center',padding: '20px'}}>
+              <Box sx={{ bgcolor: '#26a69a', borderRadius: '50%', width: 60, height: 60, mx: 'auto', mt: 2, mb: 2 }}>
+                <CheckCircleIcon sx={{ fontSize: 40, color: 'white', mt: 1 }} />
               </Box>
-              <Typography variant="body1">
-                Nationwide reach across Riyadh, Jeddah, Dammam, Makkah, Madinah Abha, and Tabuk
+             <Typography variant="body1">
+                Nationwide reach across Riyadh, Jeddah,
+                 Dammam, Makkah,<br/> Madinah Abha, and Tabuk
               </Typography>
-            </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Box>
+
+     <Container maxWidth="xl" sx={{ my: 4 }}>
+        <Grid container>
+          <Grid size={12}>
+            <Image
+              src={CoverImage1}
+              alt="Coverage Image 1"
+              width={1600}
+              height={400}
+              style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+            />
           </Grid>
-          <Grid size={{md:6,xs:12}}>
+        </Grid>
+      </Container>
+
+     <Container maxWidth="xl" sx={{ my: 4 }}>
+          
+        
             <Grid container spacing={2}>
-              <Grid size={{md:6,xs:12}}>
-                <Image
-                  src={CoverImage1}
-                  alt="Coverage Image 1"
-                  width={300}
-                  height={200}
-                  style={{ objectFit: 'cover', borderRadius: '8px' }}
-                />
-              </Grid>
+             
               <Grid size={{md:6,xs:12}}>
                 <Image
                   src={CoverImage2}
                   alt="Coverage Image 2"
-                  width={300}
-                  height={200}
+                  width={610}
+                  height={400}
                   style={{ objectFit: 'cover', borderRadius: '8px' }}
                 />
               </Grid>
               <Grid size={{md:6,xs:12}}>
                 <Image
-                  src={CoverImage1}
+                  src={CoverImage3}
                   alt="Coverage Image 3"
-                  width={300}
-                  height={200}
+                  width={610}
+                  height={400}
                   style={{ objectFit: 'cover', borderRadius: '8px' }}
                 />
               </Grid>
-              <Grid size={{md:6,xs:12}}>
-                <Image
-                  src={CoverImage2}
-                  alt="Coverage Image 4"
-                  width={300}
-                  height={200}
-                  style={{ objectFit: 'cover', borderRadius: '8px' }}
-                />
-              </Grid>
-            </Grid>
+            
           </Grid>
-        </Grid>
+        </Container>
       </Container>
     </HeroBox>
 

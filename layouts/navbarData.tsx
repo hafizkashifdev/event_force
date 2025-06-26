@@ -18,7 +18,7 @@ export const pagesNavbarData = [
   },
   {
     id: 5,
-    title: "Career",
+    title: "Services",
     link: Routes.CAREER,
   },
   {
