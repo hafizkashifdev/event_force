@@ -79,7 +79,6 @@ const Contact = () => {
           position: 'relative',
           zIndex: 2,
           color: '#fff',
-          py: 4,
         }}
         data-aos="fade-up"
       >
@@ -89,10 +88,10 @@ const Contact = () => {
               <Box
                 sx={{
                   background: "#67B6B2",
-                  padding: "20px",
-                  width: { xs: "100%", sm: "60%", md: "50%" },
+                  padding: "10px",
+                  width: { xs: "100%", sm: "60%", md: "40%" },
                   borderTopRightRadius: "36px",
-                  mt: 12,
+                  mt: 10,
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",
