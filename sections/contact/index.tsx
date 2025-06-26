@@ -10,6 +10,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SlideSidewayInView from "@components/animations/animation-scroll/slide-sideway-in-view";
 import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-view";
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
   const formik = useFormik({
@@ -49,7 +52,7 @@ const Contact = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 100,
       once: false,
     });
   }, []);
@@ -221,11 +224,20 @@ const Contact = () => {
             Contact Us
           </Typography>
           <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
-            <Typography color="black">📞 +966 492 7012</Typography>
-            <Typography color="black">✉️ Reservations@eventforce.sa.com</Typography>
-            <Typography color="black" dir="rtl">
-              📍 شركة إيفنت فورس لإدارة الأحداث والحشود
-            </Typography>
+            <Box display="flex" alignItems="center" gap={1}>
+              <PhoneIcon sx={{ fontSize: 20, color: 'black' }} />
+              <Typography color="black">+966 492 7012</Typography>
+            </Box>
+            <Box display="flex" alignItems="center" gap={1}>
+              <EmailIcon sx={{ fontSize: 20, color: 'black' }} />
+              <Typography color="black">Reservations@eventforce.sa.com</Typography>
+            </Box>
+            <Box display="flex" alignItems="center" gap={1}>
+              <LocationOnIcon sx={{ fontSize: 20, color: 'black' }} />
+              <Typography color="black" dir="rtl">
+                شركة إيفنت فورس لإدارة الأحداث والحشود
+              </Typography>
+            </Box>
           </Stack>
         </Box>
         </SlideUpInView>

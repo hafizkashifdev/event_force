@@ -40,7 +40,7 @@ const Coverage = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 100,
+      duration: 1000,
       once: true,
     });
   }, []);
@@ -49,7 +49,7 @@ const Coverage = () => {
     <HeroBox>
       <Container maxWidth="xl" data-aos="fade-up">
         <Grid container spacing={4}>
-          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 8 }}>
+          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 12 }}>
             <SlideSidewayInView>
               <Box
                 sx={{
@@ -57,7 +57,7 @@ const Coverage = () => {
                   padding: "20px",
                   width: { xs: "100%", sm: "60%", md: "50%" },
                   borderTopRightRadius: "36px",
-                  mt: 12,
+                  mt: 18,
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",
@@ -181,7 +181,7 @@ const Coverage = () => {
         <Container maxWidth="xl" sx={{ my: 4 }}>
           <Grid container>
             <Grid size={12}>
-              <SlideSidewayInView>
+              <SlideSidewayInView >
               <Image
                 src={CoverImage1}
                 alt="Coverage Image 1"

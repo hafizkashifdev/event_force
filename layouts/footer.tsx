@@ -18,6 +18,9 @@ import {
 } from "@mui/material";
 import { Color, Routes } from "@root/enems";
 import Link from "next/link";
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import React from "react";
 
@@ -37,6 +40,7 @@ function Footer() {
         sx={{
           flexGrow: 1,
           height: '2px',
+          px:6,
           background: 'linear-gradient(to right, #e9a04e, #5c3c0d)', // adjust as needed
         }}
       />
@@ -64,22 +68,24 @@ function Footer() {
           container
           justifyContent="space-between"
           alignItems="center"
-          sx={{ maxWidth: "1200px", margin: "0 auto", flexWrap: "wrap" }}
+          sx={{ maxWidth: "1400px", margin: "0 auto", flexWrap: "wrap" }}
         >
           <Grid >
             <Stack direction="row" spacing={2} alignItems="center">
-              <Link href="tel:+966594279012" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2"> 📞 +966 59 427 9012</Typography>
+              <Link href="tel:+966594279012" style={{ textDecoration: "none", color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
+                <PhoneIcon sx={{ fontSize: 18, mr: 0.5 }} />
+                <Typography variant="body2">+966 59 427 9012</Typography>
               </Link>
-              <Link href="mailto:Reservations@eventforce.sa" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2"> ✉️ Reservations@eventforce.sa</Typography>
+              <Link href="mailto:Reservations@eventforce.sa" style={{ textDecoration: "none", color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
+                <EmailIcon sx={{ fontSize: 18, mr: 0.5 }} />
+                <Typography variant="body2">Reservations@eventforce.sa</Typography>
               </Link>
             </Stack>
           </Grid>
           <Grid >
-            <Typography variant="body2" style={{ color: "#333" }}>
-                 شركة إيفنت فورس للأحداث والفعاليات 📍
-            </Typography>
+            <Typography variant="body2" style={{ color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
+              <LocationOnIcon sx={{ fontSize: 18, mr: 0.5 }} />
+شارع المكرونة فرعي، حي الربوة، جدة، المملكة العربية السعودية            </Typography>
           </Grid>
           <Grid >
            
@@ -90,7 +96,7 @@ function Footer() {
           </Grid>
         </Grid>
         {/* Optional: Add social media icons if needed */}
-        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mt: 2 }}>
+        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mt: 6,mb:4 }}>
           <IconButton>
             <IconFacebook />
           </IconButton>
@@ -111,18 +117,35 @@ function Footer() {
           </IconButton>
         </Stack>
        
-        <div
-          style={{
-            position: "absolute",
-            bottom: "-2px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "60px",
-            height: "10px",
-            background: "#4a9e9e",
-            borderRadius: "5px 5px 0 0",
-          }}
-        />
+        <Box
+      sx={{
+        width: '100%',
+        height: '4px', // very thin bar
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      {/* Left flat line */}
+      <Box
+        sx={{
+          flex: 1,
+          backgroundColor: '#67B6B2',
+          height: '2px',
+        }}
+      />
+
+      {/* Right rounded end */}
+      <Box
+        sx={{
+          width: '150px', // adjust based on your design
+          height: '18px',   // slightly larger for a visible gradient effect
+          background: 'linear-gradient(to bottom, #67B6B2, #2d5c5b)', // subtle depth
+          borderTopRightRadius: '4px',
+          borderBottomRightRadius: '4px',
+          mt:1.2
+        }}
+      />
+    </Box>
       </footer>
 
       

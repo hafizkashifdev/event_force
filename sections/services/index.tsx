@@ -1,11 +1,11 @@
 'use client';
 
 import { Box, Container, Grid, Typography, CardContent, CardMedia, Card } from '@mui/material';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Image from 'next/image';
-import { CoverImage4,CoverImage5,CoverImage6,CoverImage7,CoverImage8, CoverImage9 } from '@assets/coverage';
+import Image, { StaticImageData } from 'next/image';
+import { CoverImage4,CoverImage5,CoverImage6,CoverImage7,CoverImage8, CoverImage9, logo1, logo2, logo3, logo4, logo5, logo6 } from '@assets/coverage';
 import SlideSidewayInView from '@components/animations/animation-scroll/slide-sideway-in-view';
 import SlideUpInView from '@components/animations/animation-scroll/slide-up-in-view';
 
@@ -14,7 +14,28 @@ interface ImageData {
   src: string;
 }
 
+
+const logos: StaticImageData[] = [
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+];
 const Services = () => {
+
+    const [scrollX, setScrollX] = useState<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setScrollX((prev) => (prev + 1) % 1000); 
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   useEffect(() => {
     Aos.init({ duration: 1000, once: false });
   }, []);
@@ -25,6 +46,10 @@ const Services = () => {
     { title: 'Flexible Services', src: CoverImage8.src },
     { title: 'Luxury Fleet', src: CoverImage7.src },
   ];
+
+
+
+
 
   return (
     <Container maxWidth="xl" data-aos="fade-up">
@@ -170,13 +195,13 @@ const Services = () => {
           </Box>
         </Grid>
       </Grid>
-      {/* <Box
+      <Box
             sx={{
               background: '#67B6B2',
               padding: '20px',
               width: { xs: '100%', sm: '60%', md: '50%' },
               borderTopRightRadius: '36px',
-              mt:18,
+              mt:8,
               color: '#fff',
               display: 'flex',
               alignItems: 'center',
@@ -195,21 +220,48 @@ const Services = () => {
             >
              Our Clients
             </Typography>
-          </Box> */}
+          </Box>
 
-          {/* <Grid container spacing={4}>
-        <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 2 }}>
-           <Box sx={{mt:2,px:2}}>
+          <Box
+      sx={{
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        width: '100%',
+        backgroundColor: '#fff',
+        py: 4,
+      }}
+    >
+      <Box
+        sx={{
+          display: 'inline-flex',
+          gap: 6,
+          transform: `translateX(-${scrollX}px)`,
+          transition: 'transform 0.1s linear',
+          mt:2
+        }}
+      >
+        {[...logos, ...logos].map((logo: StaticImageData, index: number) => (
+          <Box
+            key={index}
+            sx={{
+              minWidth: '120px',
+              height: '60px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
             <Image
-              src={CoverImage9}
-              alt="Event Transportation"
-              width={500}
-              height={400}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+              src={logo}
+              alt={`logo-${index}`}
+              width={100}
+              height={60}
+              style={{ objectFit: 'contain' }}
             />
           </Box>
-        </Grid>
-        </Grid> */}
+        ))}
+      </Box>
+    </Box>
           <Grid size={{ md: 6, xs: 12 }}>
          
         </Grid>
