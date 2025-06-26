@@ -8,6 +8,7 @@ import IconYoutube from "@assets/footer/Icon-youtube";
 import { AppLogoIcon } from "@assets/icons";
 import HeroBox from "@components/hero-Box/hero-box";
 import {
+  Box,
   Divider,
   Grid,
   IconButton,
@@ -23,229 +24,113 @@ import React from "react";
 function Footer() {
   return (
     <HeroBox px={{ xs: 0, lg: 1 }}>
-      <footer>
-        <Divider sx={{ backgroundColor: "#000000", mt: "202px" }} />
-        <Grid container spacing={2}>
-          <Grid size={12}>
-            <Stack
-              gap={2}
-              flexDirection={"row"}
-              alignItems="center"
-              justifyContent={{ xs: "center", md: "space-between" }}
-              py={7}
-              flexWrap={"wrap"}
-              pl={5}
-            >
-              <Stack
-                gap={3}
-                maxWidth={370}
-                mb={6}
-                alignItems={{ xs: "center", lg: "unset" }}
-                textAlign={{ xs: "center", lg: "unset" }}
-                justifyContent={"space-between"}
-              >
-                <AppLogoIcon />
-                <Typography
-                  sx={{ mx: 1 }}
-                  variant="body1"
-                  color="initial"
-                  textAlign={{ xs: "center", md: "unset" }}
-                >
-                  Welcome to the future of intelligent business solutions.
-                  Event Force is your all-in-one platform, built to optimise
-                  CRM, ITSM, marketing, and sales operations efficiently.
-                </Typography>
-              </Stack>
-              <Stack
-                flexDirection={"row"}
-                gap={6}
-                maxWidth={305}
-                mb={2}
-                mr={{ xs: 0, lg: 30 }}
-                flexWrap={{ xs: "wrap", lg: "unset" }}
-                justifyContent={{ xs: "center", lg: "space-between" }}
-              >
-                <Stack
-                  justifyItems={"flex-start"}
-                  gap={2}
-                  alignItems={"flex-start"}
-                >
-                  <Typography
-                    variant="body1"
-                    fontWeight={550}
-                    color={Color.TextMain}
-                  >
-                    Company
-                  </Typography>
-
-                  <StyledNavLink href={Routes.HOME}>Home</StyledNavLink>
-                  <StyledNavLink href={Routes.About}>About</StyledNavLink>
-                  <StyledNavLink href={Routes.PRICING}>Pricing</StyledNavLink>
-                  <StyledNavLink href={Routes.CAREER}>Careers</StyledNavLink>
-                </Stack>
-                <Stack
-                  justifyItems={"flex-start"}
-                  gap={2}
-                  alignItems={"flex-start"}
-                >
-                  <Typography
-                    variant="body1"
-                    fontWeight={550}
-                    color={Color.TextMain}
-                  >
-                    Product
-                  </Typography>
-
-                  <StyledNavLink href={Routes.PRODUCTS_MARKETING}>
-                    Marketing
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_SALES}>
-                    Sales
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_SERVICES}>
-                    Services
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_OPERATION}>
-                    Operations
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_LOYALTY}>
-                    Loyalty
-                  </StyledNavLink>
-                </Stack>
-                <Stack
-                  justifyItems={"flex-start"}
-                  gap={2}
-                  alignItems={"flex-start"}
-                >
-                  <Typography
-                    variant="body1"
-                    fontWeight={550}
-                    color={Color.TextMain}
-                  >
-                    Resources
-                  </Typography>
-
-                  <StyledNavLink href={Routes.PRODUCTS_MEETINGS}>
-                    Meetings
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_CALL_CENTER}>
-                    Call Centre
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.PRODUCTS_CONTRACTS}>
-                    Contracts
-                  </StyledNavLink>
-                  <StyledNavLink href={Routes.AGENTIC_007}>
-                    Agentic007
-                  </StyledNavLink>
-                </Stack>
-                <Stack
-                  justifyItems={"flex-start"}
-                  gap={2}
-                  alignItems={"flex-start"}
-                >
-                  <Typography
-                    variant="body1"
-                    fontWeight={550}
-                    color={Color.TextMain}
-                  >
-                    Support
-                  </Typography>
-
-                  <StyledNavLink href={Routes.CONTACT}>
-                    Contact Us
-                  </StyledNavLink>
-                  <StyledNavLink href={"https://app.agenticcreed.ai/sign-up"}>
-                    Get started
-                  </StyledNavLink>
-                </Stack>
-              </Stack>
+      <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+      }}
+    >
+      {/* Gradient line */}
+      <Box
+        sx={{
+          flexGrow: 1,
+          height: '2px',
+          background: 'linear-gradient(to right, #e9a04e, #5c3c0d)', // adjust as needed
+        }}
+      />
+      
+      {/* Circle dot */}
+      <Box
+        sx={{
+          width: 24,
+          height: 24,
+          borderRadius: '50%',
+          background: 'linear-gradient(to right, #e9a04e, #5c3c0d)', // same gradient
+          marginLeft: '-12px', // slightly overlaps the end of the line
+        }}
+      />
+    </Box>
+      <footer
+        style={{
+          padding: "10px 20px",
+          
+          position: "relative",
+        }}
+      >
+       
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{ maxWidth: "1200px", margin: "0 auto", flexWrap: "wrap" }}
+        >
+          <Grid >
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Link href="tel:+966594279012" style={{ textDecoration: "none", color: "#333" }}>
+                <Typography variant="body2">+966 59 427 9012</Typography>
+              </Link>
+              <Link href="mailto:Reservations@eventforce.sa" style={{ textDecoration: "none", color: "#333" }}>
+                <Typography variant="body2">Reservations@eventforce.sa</Typography>
+              </Link>
             </Stack>
-
-            {/* <Divider sx={{ backgroundColor: "#000000" }} /> */}
-            <Stack
-              flexDirection={{ xs: "column", lg: "row" }}
-              justifyContent={{ xs: "center", lg: "space-between" }}
-              padding={2}
-              px={0}
-              flexWrap={"wrap"}
-              gap={2}
-              alignItems={"center"}
-           
-            >
-              <Typography variant="body1" color="initial">
+          </Grid>
+          <Grid >
+            <Typography variant="body2" style={{ color: "#333" }}>
+                 شركة إيفنت فورس للأحداث والفعاليات
+            </Typography>
+          </Grid>
+          <Grid >
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Link href="/Terms-of-Service" style={{ textDecoration: "none", color: "#333" }}>
+                <Typography variant="body2">Terms & Conditions</Typography>
+              </Link>
+              <Link href="/privacy-policy" style={{ textDecoration: "none", color: "#333" }}>
+                <Typography variant="body2">Privacy Policy</Typography>
+              </Link>
+              <Typography variant="body2" style={{ color: "#333" }}>
                 © 2025 Event Force All Rights Reserved
               </Typography>
-              <Stack flexDirection={"row"} gap={2}>
-                <IconButton
-                  onClick={() => {
-                    window.open(
-                      "https://www.facebook.com/agenticcreed",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <IconFacebook />
-                </IconButton>
-                <IconButton
-                  onClick={() => {
-                    window.open(
-                      "https://www.youtube.com/@agenticcreed",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <IconYoutube />
-                </IconButton>
-                <IconButton
-                  onClick={() => {
-                    window.open(
-                      "https://www.instagram.com/agenticcreed/",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <IconInstagram />
-                </IconButton>
-                <IconButton
-                  onClick={() => {
-                    window.open(
-                      "https://www.linkedin.com/company/agenticcreed",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <IconLinkedin />
-                </IconButton>
-                <IconButton
-                  onClick={() => {
-                    window.open(
-                      "https://www.tiktok.com/@agenticcreed",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <IconTickTok />
-                </IconButton>
-                <IconButton
-                  onClick={() => {
-                    window.open("https://x.com/agenticcreed", "_blank");
-                  }}
-                >
-                  <IconX />
-                </IconButton>
-              </Stack>
-              <Stack flexDirection={"row"} gap={2} mr={{ xs: 0, lg: 2 }}>
-                <StyledNavLink href={Routes.TERMS_OF_SERVICE}>
-                  Terms & Conditions
-                </StyledNavLink>
-                <StyledNavLink href={Routes.PRIVACY_POLICY}>
-                  Privacy Policy
-                </StyledNavLink>
-              </Stack>
             </Stack>
           </Grid>
         </Grid>
+        {/* Optional: Add social media icons if needed */}
+        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mt: 2 }}>
+          <IconButton>
+            <IconFacebook />
+          </IconButton>
+          <IconButton>
+            <IconInstagram />
+          </IconButton>
+          <IconButton>
+            <IconLinkedin />
+          </IconButton>
+          <IconButton>
+            <IconTickTok />
+          </IconButton>
+          <IconButton>
+            <IconX />
+          </IconButton>
+          <IconButton>
+            <IconYoutube />
+          </IconButton>
+        </Stack>
+       
+        <div
+          style={{
+            position: "absolute",
+            bottom: "-2px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "60px",
+            height: "10px",
+            background: "#4a9e9e",
+            borderRadius: "5px 5px 0 0",
+          }}
+        />
       </footer>
+
+      
     </HeroBox>
   );
 }

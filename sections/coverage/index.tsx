@@ -38,9 +38,10 @@ const coverage = () => {
   }, []);
 
   return (
-    <HeroBox>
-      <Container maxWidth="xl" data-aos="fade-up">
-        <Box display="flex" justifyContent="flex-start" width="100%" mb={4} mt={2}>
+     <HeroBox>
+    <Container maxWidth="xl" data-aos="fade-up">
+        <Grid container spacing={4}>
+          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 12 }}>
           <Box
             sx={{
               background: '#67B6B2',
@@ -67,7 +68,7 @@ const coverage = () => {
               Coverage
             </Typography>
           </Box>
-        </Box>
+        </Grid>
         <Box sx={{}}>
       <Grid container spacing={2}>
         <Grid size={{xs:12,md:6}}>
@@ -108,7 +109,7 @@ const coverage = () => {
         </Grid>
       </Grid>
     </Box>
-
+</Grid>
      <Container maxWidth="xl" sx={{ my: 4 }}>
         <Grid container>
           <Grid size={12}>
