@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { CoverImage4,CoverImage5,CoverImage6,CoverImage7,CoverImage8, CoverImage9 } from '@assets/coverage';
 import SlideSidewayInView from '@components/animations/animation-scroll/slide-sideway-in-view';
+import SlideUpInView from '@components/animations/animation-scroll/slide-up-in-view';
 
 interface ImageData {
   title: string;
@@ -57,12 +58,15 @@ const Services = () => {
 
       <Grid container spacing={4} mt={2} alignItems="center">
         <Grid size={{ md: 6, xs: 12 }}>
+          <SlideSidewayInView>
           <Typography variant="body1" sx={{ mb: 2 }}>
             Based in Saudi Arabia, we are a leading provider of comprehensive event transportation and crowd management services, dedicated to delivering seamless logistics and uncompromising safety for events of all sizes.
-          </Typography>
+          </Typography></SlideSidewayInView>
+          <SlideUpInView>
           <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 2 }}>
             Our offerings include:
-          </Typography>
+          </Typography></SlideUpInView>
+          <SlideSidewayInView>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
             {[
               'Coordinated guest transportation',
@@ -87,10 +91,11 @@ const Services = () => {
                 {item}
               </Box>
             ))}
-          </Box>
+          </Box></SlideSidewayInView>
+          <SlideUpInView>
           <Typography variant="body2" mt={3}>
             We ensure efficient crowd control, smooth VIP movements, professional parking management, and the highest standards of safety and order. Trusted by clients across the Kingdom, we are the go-to partner for flawless event execution and operational excellence.
-          </Typography>
+          </Typography></SlideUpInView>
         </Grid>
         <Grid size={{ md: 6, xs: 12 }}>
           <Box sx={{ width: '100%', borderRadius: '20px', overflow: 'hidden' }}>
@@ -98,7 +103,7 @@ const Services = () => {
               src={CoverImage4}
               alt="Event Transportation"
               width={500}
-              height={400}
+              height={500}
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
             />
           </Box>
@@ -149,7 +154,7 @@ const Services = () => {
                   >
                     <CardMedia
                       component="img"
-                      height="200"
+                      height="400"
                       image={image.src}
                       alt={image.title}
                     />
