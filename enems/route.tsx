@@ -5,7 +5,7 @@ export enum Routes {
   About = "/about-us",
   LAYOUT = "/layout",
   PARTNER_WITH_US = "/partner-with-us",
-  PRICING = "/pricing",
+  PRICING = "/coverage",
   PRODUCTS_CALL_CENTER = "/products/call-center",
   PRODUCTS_CONTRACTS = "/products/contracts",
   PRODUCTS_LOYALTY = "/products/loyalty",

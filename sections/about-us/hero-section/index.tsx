@@ -38,11 +38,7 @@ const HeroSection = () => {
                 color: Color.TextSecondary,
               }}
             >
-              At Event Force, we believe in empowering businesses with
-              intelligent automation and streamlined solutions. We are a
-              next-generation CRM and business management platform, designed to
-              bring efficiency, productivity, and seamless collaboration across
-              multiple business functions.
+              Event Force is a full service professional event management company with more than 10 years of ex- perience, specializing in the creation of customized events for corporate or personal clients, starting with conception, going through planning, design and ending with execution.
             </Typography>
           </Grid>
           <Grid size={{ xs: 12 }} sx={{ mt: "67px" }}>

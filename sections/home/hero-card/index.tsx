@@ -22,7 +22,7 @@ export const HeroCard = () => {
                 <Box sx={{ marginY: 2 }}>
                   <Typography
                     sx={{
-                      fontSize: "3.5rem",
+                      fontSize: "3.4rem",
                       fontWeight: FontWeight?.SemiBold,
                       lineHeight: "120%",
                       letterSpacing: "-3px",
@@ -39,6 +39,7 @@ export const HeroCard = () => {
                     lineHeight: "30px",
                     letterSpacing: "-0.3px",
                     color: "#697C77",
+                    
                   }}
                 >
                   Premier transportation & logistics for high-profile events in
