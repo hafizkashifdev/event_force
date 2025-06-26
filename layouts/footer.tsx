@@ -69,16 +69,16 @@ function Footer() {
           <Grid >
             <Stack direction="row" spacing={2} alignItems="center">
               <Link href="tel:+966594279012" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2">+966 59 427 9012</Typography>
+                <Typography variant="body2"> 📞 +966 59 427 9012</Typography>
               </Link>
               <Link href="mailto:Reservations@eventforce.sa" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2">Reservations@eventforce.sa</Typography>
+                <Typography variant="body2"> ✉️ Reservations@eventforce.sa</Typography>
               </Link>
             </Stack>
           </Grid>
           <Grid >
             <Typography variant="body2" style={{ color: "#333" }}>
-                 شركة إيفنت فورس للأحداث والفعاليات
+                 شركة إيفنت فورس للأحداث والفعاليات 📍
             </Typography>
           </Grid>
           <Grid >

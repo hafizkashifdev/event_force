@@ -8,6 +8,8 @@ import * as Yup from "yup";
 import { FontSize, FontWeight } from "@root/enems/text-size";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SlideSidewayInView from "@components/animations/animation-scroll/slide-sideway-in-view";
+import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-view";
 
 const Contact = () => {
   const formik = useFormik({
@@ -82,18 +84,35 @@ const Contact = () => {
         data-aos="fade-up"
       >
         <Grid container spacing={2} justifyContent="center">
-          <Grid size={{ xs: 12, md: 12 }}>
-            <Typography
-              sx={{
-                fontSize: FontSize.subTitle,
-                fontWeight: FontWeight.SemiBold,
-                color: Color.TextGreen,
-                mt: "95px",
-                textAlign: "center",
-              }}
-            >
-              Send us a message
-            </Typography>
+          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 8 }}>
+            <SlideSidewayInView>
+              <Box
+                sx={{
+                  background: "#67B6B2",
+                  padding: "20px",
+                  width: { xs: "100%", sm: "60%", md: "50%" },
+                  borderTopRightRadius: "36px",
+                  mt: 12,
+                  color: "#fff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{
+                    m: 0,
+                    p: 0,
+                    textAlign: "center",
+                    width: "100%",
+                    fontWeight: 700,
+                  }}
+                >
+                  Contact Us
+                </Typography>
+              </Box>
+            </SlideSidewayInView>
           </Grid>
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
@@ -101,6 +120,7 @@ const Contact = () => {
               onSubmit={formik.handleSubmit}
               sx={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', p: 3, borderRadius: 2 }}
             >
+              <SlideUpInView>
               <Box sx={{ mb: 2 }}>
                 <FormLabel
                   sx={{
@@ -172,7 +192,8 @@ const Contact = () => {
                   sx={styles.textFieldStyles}
                 />
               </Box>
-              <Button
+              </SlideUpInView>
+             <SlideSidewayInView> <Button
                 type="submit"
                 variant="contained"
                 fullWidth
@@ -183,10 +204,11 @@ const Contact = () => {
                 }}
               >
                 Send Message
-              </Button>
+              </Button></SlideSidewayInView>
             </Box>
           </Grid>
         </Grid>
+        <SlideUpInView>
         <Box
           sx={{
             mt: 4,
@@ -207,6 +229,7 @@ const Contact = () => {
             </Typography>
           </Stack>
         </Box>
+        </SlideUpInView>
       </Container>
     </Box>
   );
