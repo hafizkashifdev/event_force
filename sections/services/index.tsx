@@ -116,7 +116,7 @@ const Services = () => {
                 borderTopRightRadius: "20px",
                 borderBottomLeftRadius: "8px",
                 borderBottomRightRadius: "8px",
-              mt: 18,
+              mt: 4,
               color: '#fff',
               display: 'flex',
               alignItems: 'center',

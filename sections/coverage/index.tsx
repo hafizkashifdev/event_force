@@ -40,7 +40,7 @@ const Coverage = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 100,
       once: true,
     });
   }, []);
