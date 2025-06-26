@@ -29,6 +29,7 @@ function Footer() {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
+        mt:8
       }}
     >
       {/* Gradient line */}
@@ -81,17 +82,11 @@ function Footer() {
             </Typography>
           </Grid>
           <Grid >
-            <Stack direction="row" spacing={2} alignItems="center">
-              <Link href="/Terms-of-Service" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2">Terms & Conditions</Typography>
-              </Link>
-              <Link href="/privacy-policy" style={{ textDecoration: "none", color: "#333" }}>
-                <Typography variant="body2">Privacy Policy</Typography>
-              </Link>
+           
               <Typography variant="body2" style={{ color: "#333" }}>
                 © 2025 Event Force All Rights Reserved
               </Typography>
-            </Stack>
+            
           </Grid>
         </Grid>
         {/* Optional: Add social media icons if needed */}

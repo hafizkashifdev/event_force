@@ -8,10 +8,10 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Event Force | All-in-One Business Growth Platform",
+  title: "Event Force | Precision Transport for Unforgettable Events",
   description:
-    "Event Force– a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
-  // viewport: "initial-scale=1, width=device-width",
+    "Event Force– Deliver seamless, high-quality transport and logistics for events across Saudi Arabia, with a focus on professionalism, precision, and customer satisfaction",
+  
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Event Force | All-in-One Business Growth Platform",
+    title: "Event Force | Precision Transport for Unforgettable Events",
     description:
-      "Event Force– a powerful platform uniting Sales, Marketing, Operations, and Services. Simplify workflows, boost productivity, and scale your business faster with ease.",
-    url: "https://agenticcreed.ai/",
+      "Event Force– Deliver seamless, high-quality transport and logistics for events across Saudi Arabia, with a focus on professionalism, precision, and customer satisfaction.",
+    url: "https://eventforce.com/",
     type: "website",
     images: [
       {
-        url: "https://agenticcreed.ai/og-logo.png",
+        url: "https://eventforce.com/og-logo.png",
         width: 1200,
         height: 630,
-        alt: "Event Force | All-in-One Business Growth Platform",
+        alt: "Event Force | Precision Transport for Unforgettable Events",
       },
     ],
   },

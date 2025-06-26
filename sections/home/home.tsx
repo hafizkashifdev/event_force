@@ -31,6 +31,8 @@ import { ContainerGridLayout } from "@components/layouts/container-grid-layout";
 import { ItemGridLayout } from "@components/layouts/item-grid-layout";
 import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-view";
 import { ANIMATIONS_BASE_DURATION } from "@root/constants/animations";
+import SlideSidewayInView from "@components/animations/animation-scroll/slide-sideway-in-view";
+import AboutUs from "@sections/about-us";
 
 const CustomUl2 = styled("ul")`
   li::marker {
@@ -163,7 +165,7 @@ function HomeSections() {
       setDisplayCount(Math.round(latest)); // Update state with rounded value
     });
     const unsubscribeTwo = reviews.onChange((latest) => {
-      setReviewsCount(Math.round(latest)); // Update state with rounded value
+      setReviewsCount(Math.round(latest));
     });
 
     // Animate the count value
@@ -174,9 +176,9 @@ function HomeSections() {
     });
 
     return () => {
-      controls.stop(); // Stop animation on unmount
-      controlsww.stop(); // Stop animation on unmount
-      unsubscribe(); // Cleanup listener
+      controls.stop();
+      controlsww.stop();
+      unsubscribe();
       unsubscribeTwo();
     };
   }, [count]);
@@ -195,9 +197,7 @@ function HomeSections() {
           py: { xs: 10, md: 15 },
         }}
       >
-        <Box
-       
-        >
+        <Box>
           <HeroCard />
         </Box>
       </Box>
@@ -216,73 +216,73 @@ function HomeSections() {
                   Premium Event Mobility and Logistics
                 </Typography>
               </Stack>
-             
             </Stack>
           </Grid>
-         
         </Container>
       </HeroBox>
 
-       <ContainerGridLayout customStyles={{ alignItems: "center",mt:8 }}  
-      >
-                <ItemGridLayout md={5} lg={6}>
-                  <SlideUpInView height="100%">
-                    <Box
-                      sx={{
-                        height: "100%",
-                      }}
-                    >
-                      
-                      <Typography
-                        sx={{
-                          fontSize: FontSize?.ExtraLarge,
-                          fontWeight: FontWeight?.SemiBold,
-                          lineHeight: "30px",
-                          letterSpacing: "-0.3px",
-                          color: "#697C77",
-                          py: { xs: 10, md: 5 },
-                          px:{ xs: 10, md: 12 },
-
-        
-                        }}
-                      >
-                        At Event Force for Entertainment, we specialize in managing and delivering transportation and logistics services for high profile events, VIP delegations, corporate functions, and entertainment festivals across Saudi Arabia.
-Whether you need luxury chauffeured vehicles, efficient shuttle coordination, or large-scale fleet support, we ensure everything runs smoothly, professionally, and on time, so you can focus on your event while we handle the movement behind the scenes.
-With deep experience in both public and private sectors, and a reputation for reliability, Event Force is trusted by top-tier clients who expect nothing but the best.
-                      </Typography>
-                      <br />
-                      
-                      <br />
-                      <Box>
-                        
-                      </Box>
-                    </Box>
-                  </SlideUpInView>
-                </ItemGridLayout>
-                <ItemGridLayout md={7} lg={6}>
-                             <Image
-                src={introductionImage}
-                alt="image"
-                style={{
-                  maxWidth: "auto",
-                  width: "670px",
-                  height:"auto",
-                  marginLeft:"auto",
-                  objectFit: "contain",
+      <ContainerGridLayout customStyles={{ alignItems: "center", mt: 8 }}>
+        <ItemGridLayout md={5} lg={6}>
+          <SlideUpInView height="100%">
+            <Box
+              sx={{
+                height: "100%",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: FontSize?.ExtraLarge,
+                  fontWeight: FontWeight?.SemiBold,
+                  lineHeight: "30px",
+                  letterSpacing: "-0.3px",
+                  color: "#697C77",
+                  py: { xs: 10, md: 5 },
+                  px: { xs: 10, md: 12 },
                 }}
-              />
-                          </ItemGridLayout>
-              </ContainerGridLayout>
+              >
+                At Event Force for Entertainment, we specialize in managing and
+                delivering transportation and logistics services for high
+                profile events, VIP delegations, corporate functions, and
+                entertainment festivals across Saudi Arabia. Whether you need
+                luxury chauffeured vehicles, efficient shuttle coordination, or
+                large-scale fleet support, we ensure everything runs smoothly,
+                professionally, and on time, so you can focus on your event
+                while we handle the movement behind the scenes. With deep
+                experience in both public and private sectors, and a reputation
+                for reliability, Event Force is trusted by top-tier clients who
+                expect nothing but the best.
+              </Typography>
+              <br />
 
+              <br />
+              <Box></Box>
+            </Box>
+          </SlideUpInView>
+        </ItemGridLayout>
+        <ItemGridLayout md={7} lg={6}>
+          <SlideSidewayInView>
+            <Image
+              src={introductionImage}
+              alt="image"
+              style={{
+                maxWidth: "auto",
+                width: "670px",
+                height: "auto",
+                marginLeft: "auto",
+                objectFit: "contain",
+              }}
+            />
+          </SlideSidewayInView>
+        </ItemGridLayout>
+      </ContainerGridLayout>
+      <Box sx={{mt:-12}}>
+<AboutUs/></Box>
       <HeroBox>
-
-        
-           
         <Grid
           data-aos="fade-down"
           container
           sx={{
-            bgcolor: Color.TextGreen,
+            bgcolor: '#67B6B2',
             py: 9,
             px: 6,
             borderRadius: "5px",
@@ -290,11 +290,12 @@ With deep experience in both public and private sectors, and a reputation for re
         >
           <Grid size={{ xs: 12, md: 6 }}>
             <Stack gap={2} flexDirection={"row"} alignItems="center">
-              <Typography variant="h3" fontSize={40} color={Color.commonWhite}>
-                Trusted by Thousands of Businesses Worldwide{" "}
+              <Typography variant="h4" fontSize={40} color={Color.commonWhite}>
+               Trusted by Top-Tier Clients Across Saudi Arabia{" "}
               </Typography>
             </Stack>
           </Grid>
+
           
 
           <Grid size={{ xs: 12, md: 6 }}>
@@ -320,16 +321,15 @@ With deep experience in both public and private sectors, and a reputation for re
                   fontSize={FontSize.ExtraLarge}
                   color="white"
                 >
-                  Active Users{" "}
+                  Successful Rides Delivered{" "}
                 </Typography>
                 <Typography
                   variant="body1"
                   fontSize={FontSize.Small}
-                  color="#B9C1BF"
+                  color={Color.commonWhite}
                   fontWeight={FontWeight.Regular}
                 >
-                  Empowering businesses globally with seamless CRM, marketing,
-                  and automation solutions.{" "}
+             From VIP delegations to large-scale events, our expert logistics ensure flawless execution..{" "}
                 </Typography>
               </Stack>
               <Stack>
@@ -339,7 +339,7 @@ With deep experience in both public and private sectors, and a reputation for re
                     fontSize={FontSize.largeTitle}
                     color="white"
                   >
-                    4.7
+                    4.9
                     <Rating name="half-rating" defaultValue={7} precision={7} />
                   </Typography>
                 </motion.pre>
@@ -349,25 +349,23 @@ With deep experience in both public and private sectors, and a reputation for re
                   fontSize={FontSize.ExtraLarge}
                   color="white"
                 >
-                  Backed by {reviewsCount}+ positive reviews
+                  Rated by {reviewsCount}+ Satisfied Partners
                 </Typography>
                 <Typography
                   variant="body1"
                   fontSize={FontSize.Small}
                   fontWeight={FontWeight.Regular}
-                  color="#B9C1BF"
+               color={Color.commonWhite}
                 >
-                  Empowering businesses globally with seamless CRM, marketing,
-                  and automation solutions.{" "}
+                  Seamless coordination, luxurious comfort, and unmatched reliability in every mile.
+
+.{" "}
                 </Typography>
               </Stack>
             </Stack>
           </Grid>
         </Grid>
       </HeroBox>
-     
-    
-     
     </>
   );
 }

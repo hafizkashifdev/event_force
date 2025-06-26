@@ -15,10 +15,11 @@ import { useEffect } from "react";
 import HeroBox from "@components/hero-Box/hero-box";
 import {
   missionDSCImage1,
-  missionDSCImage2,
-  missionDSCImage3,
 } from "@assets/about-us";
 import Image from "next/image";
+import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-view";
+import SlideSidewayInView from "@components/animations/animation-scroll/slide-sideway-in-view";
+import ScaleInView from "@components/animations/animation-scroll/scale-in-view";
 
 const OurMission = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const OurMission = () => {
       <Container maxWidth="xl" data-aos="fade-up">
         <Grid container spacing={2} sx={{ padding: 2 }}>
           <Grid size={4}>
+            <SlideSidewayInView>
             <Typography
               variant="h4"
               align="center"
@@ -41,25 +43,36 @@ const OurMission = () => {
                 border: "2px solid #67B6B2",
                 padding: 1,
                 backgroundColor: "#67B6B2",
+                borderTopLeftRadius: "8px",
+                borderTopRightRadius: "20px",
+                borderBottomLeftRadius: "8px",
+                borderBottomRightRadius: "8px",
                 color: "white",
+                mt:2
               }}
             >
               OUR MISSION
             </Typography>
+            </SlideSidewayInView>
           </Grid>
 
           <Grid size={12}>
+            <SlideUpInView>
             <Typography variant="body1" sx={{ color: "#333" }}>
               To deliver seamless, high-quality transportation and logistical
               solutions that elevate events and experiences across Saudi Arabia,
               with a focus on professionalism, precision, and customer
               satisfaction.
             </Typography>
+            </SlideUpInView>
           </Grid>
         </Grid>
         <Grid container spacing={2} sx={{ padding: 2 }}>
-          <Grid size={4}>
+          
+          <Grid size={5}>
+            <SlideSidewayInView>
             <Typography
+            variant="h4"
               align="center"
               gutterBottom
               sx={{
@@ -67,10 +80,15 @@ const OurMission = () => {
                 padding: 1,
                 background: "linear-gradient(to right, #d38c3a, #8c4f10)",
                 color: "white",
+                 borderTopLeftRadius: "8px",
+                borderTopRightRadius: "20px",
+                borderBottomLeftRadius: "8px",
+                borderBottomRightRadius: "8px",
               }}
             >
               OUR VISION
-            </Typography>
+            </Typography></SlideSidewayInView>
+            <SlideUpInView>
             <Typography
               variant="body1"
               gutterBottom
@@ -82,48 +100,23 @@ const OurMission = () => {
               transportation in the Kingdom, known for our reliability,
               excellence in service, and commitment to supporting Saudi Arabia’s
               growing entertainment and hospitality sectors.
-            </Typography>
-          </Grid>
+            </Typography></SlideUpInView>
+          </Grid> 
 
-          <Grid size={8}>
+          <Grid size={7}>
+            <ScaleInView>
             <Image
               src={missionDSCImage1}
               alt="Flag"
-              width={300}
-              height={200}
-              style={{ objectFit: "cover", width: "100%", height: "200px" }}
+              width={600}
+              height={400}
+              style={{ objectFit: "cover", width: "100%", height: "400px" }}
             />
+            </ScaleInView>
           </Grid>
         </Grid>
 
-        <Grid container spacing={2} justifyContent="center">
-          <Grid size={{ lg: 4, xs: 12 }}>
-            <Card>
-              <CardMedia>
-                <Image
-                  src={missionDSCImage2}
-                  alt="Car"
-                  width={100}
-                  height={100}
-                  layout="responsive"
-                />
-              </CardMedia>
-            </Card>
-          </Grid>
-          <Grid size={{ lg: 8, xs: 12 }}>
-            <Card>
-              <CardMedia>
-                <Image
-                  src={missionDSCImage3}
-                  alt="Car"
-                  width={300}
-                  height={200}
-                  layout="responsive"
-                />
-              </CardMedia>
-            </Card>
-          </Grid>
-        </Grid>
+       
       </Container>
     </HeroBox>
   );

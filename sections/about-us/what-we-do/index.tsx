@@ -1,4 +1,7 @@
 import { GoldCar, WhatWeDo, WhiteCar } from '@assets/about-us';
+import ScaleInView from '@components/animations/animation-scroll/scale-in-view';
+import SlideSidewayInView from '@components/animations/animation-scroll/slide-sideway-in-view';
+import SlideUpInView from '@components/animations/animation-scroll/slide-up-in-view';
 import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
@@ -16,6 +19,7 @@ const WhatWeDO = () => {
         position: 'relative',
       }}
     >
+      <SlideSidewayInView>
       <Typography
         variant="h4"
         sx={{
@@ -24,14 +28,15 @@ const WhatWeDO = () => {
           marginBottom: '40px',
           textAlign: 'right',
           width: '50%',
-          marginLeft: 'auto',
+          marginRight: 'auto',
           borderBottomLeftRadius: '36px',
         }}
       >
         WHAT WE DO
-      </Typography>
+      </Typography></SlideSidewayInView>
       <Grid container spacing={2} justifyContent="center">
-        <Grid size={{ xs: 12, md: 8 }} sx={{ marginBottom: '20px' }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ marginTop: '20px' ,marginBottom: '20px'  }}>
+          <ScaleInView>
           <Image
             src={WhatWeDo}
             alt="What We Do"
@@ -43,14 +48,15 @@ const WhatWeDO = () => {
               borderRadius: '20px',
               objectFit: 'cover',
             }}
-          />
+          />  </ScaleInView>
         </Grid>
 
       </Grid>
 
       <Container>
         <Grid container spacing={2} alignItems="center" justifyContent="center" marginTop= '20px'>
-          <Grid size={{xs:12,md:4}}>
+          <Grid size={{xs:12,md:5 ,}} sx={{ marginTop: '30px', marginBottom: '10px' }}>
+            <SlideUpInView>
             <Image
               src={WhiteCar}
               alt="White Car"
@@ -62,9 +68,10 @@ const WhatWeDO = () => {
                 borderRadius: '20px',
                 objectFit: 'cover',
               }}
-            />
+            /></SlideUpInView>
           </Grid>
-          <Grid size={{xs:12,md:8}}>
+          <Grid size={{xs:12,md:7}}>
+            <SlideUpInView>
             <Image
               src={GoldCar}
               alt="Gold Car"
@@ -76,7 +83,7 @@ const WhatWeDO = () => {
                 borderRadius: '20px',
                 objectFit: 'cover',
               }}
-            />
+            /></SlideUpInView>
           </Grid>
         </Grid>
       </Container>

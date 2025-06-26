@@ -154,7 +154,7 @@ export const OldHeroCard = () => {
                       borderRadius: "8px",
                     }}
                     // onClick={() => {
-                    //   router.push("https://app.agenticcreed.ai/sign-up");
+                    //   router.push("#");
                     // }}
                   >
                     Get Started For Free

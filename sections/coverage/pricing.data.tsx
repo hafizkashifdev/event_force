@@ -356,7 +356,7 @@ export const billEstimateData = [
     {
         id: '1',
         title: 'Bill Estimate',
-        desc: 'At Event Force, we believe in empowering businesses with intelligent automation and streamlined solutions. We are a next-generation CRM and business management platform, designed to bring efficiency, productivity, and seamless collaboration across multiple business functions.',
+        desc: 'At Event Force, Deliver seamless, high-quality transport and logistics for events across Saudi Arabia, with a focus on professionalism, precision, and customer satisfaction',
 
         subEstimation: [
             {

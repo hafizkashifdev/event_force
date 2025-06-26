@@ -90,7 +90,7 @@ const FooterCard: React.FC<FooterCardProps> = ({
                 padding: "20px",
                 borderRadius: "8px",
               }}
-              onClick={() => router.push('https://app.agenticcreed.ai/sign-up')}
+              onClick={() => router.push('#')}
             >
               {btnText}
             </Button>

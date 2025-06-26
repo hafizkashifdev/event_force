@@ -1,4 +1,4 @@
-import { HeroSectionImage } from "@assets/about-us";
+import { HeroSectionImage, missionDSCImage2, missionDSCImage3 } from "@assets/about-us";
 import { Container, Grid, Typography } from "@mui/material";
 import { Color } from "@root/enems";
 import { FontSize, FontWeight } from "@root/enems/text-size";
@@ -8,6 +8,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import HeroBox from "@components/hero-Box/hero-box";
+import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-view";
+import { CounterInView } from "@components/animations/animation-scroll/counter-in-view";
+import ScaleInView from "@components/animations/animation-scroll/scale-in-view";
 const HeroSection = () => {
   useEffect(() => {
     Aos.init({
@@ -19,7 +22,8 @@ const HeroSection = () => {
     <HeroBox>
       <Container maxWidth="xl" data-aos="fade-up">
         <Grid container spacing={2} >
-          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: "100px" }}>
+          <Grid size={{ xs: 12, md: 12 }} sx={{ mt: "120px" }}>
+            <ScaleInView>
             <Typography
               sx={{
                 fontSize: FontSize.title,
@@ -28,9 +32,10 @@ const HeroSection = () => {
               }}
             >
               About Us – Who We Are
-            </Typography>
+            </Typography></ScaleInView>
           </Grid>
           <Grid size={{ xs: 12, md: 9 }} sx={{ mt: "20px" }}>
+            <SlideUpInView>
             <Typography
               sx={{
                 fontSize: FontSize.ExtraLarge,
@@ -39,19 +44,20 @@ const HeroSection = () => {
               }}
             >
               Event Force is a full service professional event management company with more than 10 years of ex- perience, specializing in the creation of customized events for corporate or personal clients, starting with conception, going through planning, design and ending with execution.
-            </Typography>
+            </Typography></SlideUpInView>
           </Grid>
-          <Grid size={{ xs: 12 }} sx={{ mt: "67px" }}>
+          <Grid size={{ xs: 12 }} sx={{ mt: "20px" }}>
+            <SlideUpInView>
             <Image
-              src={HeroSectionImage}
+              src={missionDSCImage3}
               alt="image"
               style={{
                 width: "100%",
-                height: "100%",
+                height: "500px",
                 objectFit: "cover",
                 borderRadius: "20px",
               }}
-            />
+            /></SlideUpInView>
           </Grid>
         </Grid>
       </Container>

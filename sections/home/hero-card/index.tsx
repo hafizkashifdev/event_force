@@ -26,7 +26,7 @@ export const HeroCard = () => {
                       fontWeight: FontWeight?.SemiBold,
                       lineHeight: "120%",
                       letterSpacing: "-3px",
-                      color: Color?.TextGreen,
+                      color:'#2D504E',
                     }}
                   >
                     Driving Your Events to Success
@@ -55,7 +55,7 @@ export const HeroCard = () => {
                   }}
                 >
                   <Link
-                    href={"https://app.agenticcreed.ai/sign-up"}
+                    href={"#"}
                     target="_blank"
                   >
                     <Button
@@ -66,7 +66,7 @@ export const HeroCard = () => {
                         fontWeight: FontWeight?.SemiBold,
                         border: "1px solid #E0E0E0",
                         borderRadius: "8px",
-                        color: Color?.TextGreen,
+                        color: '#2D504E',
                         letterSpacing: "-0.3px",
                         lineHeight: "24px",
                         padding: "1rem",

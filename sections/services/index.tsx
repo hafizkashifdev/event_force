@@ -6,6 +6,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { CoverImage4,CoverImage5,CoverImage6,CoverImage7,CoverImage8, CoverImage9 } from '@assets/coverage';
+import SlideSidewayInView from '@components/animations/animation-scroll/slide-sideway-in-view';
 
 interface ImageData {
   title: string;
@@ -27,7 +28,8 @@ const Services = () => {
   return (
     <Container maxWidth="xl" data-aos="fade-up">
       <Grid container spacing={4}>
-        <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 16 }}>
+        <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 18 }}>
+          <SlideSidewayInView>
           <Box
             sx={{
               background: 'linear-gradient(to bottom, #67B6B2, #2D504E)',
@@ -36,6 +38,11 @@ const Services = () => {
               py: 2,
               borderRadius: '0 0 20px 0',
               maxWidth: '600px',
+              borderTopLeftRadius: "8px",
+                borderTopRightRadius: "20px",
+                borderBottomLeftRadius: "8px",
+                borderBottomRightRadius: "8px",
+
             }}
           >
             <Typography variant="h6" fontWeight="bold" letterSpacing={2}>
@@ -44,11 +51,11 @@ const Services = () => {
             <Typography variant="h6" fontWeight="bold" letterSpacing={2}>
               CROWD MANAGEMENT SOLUTIONS
             </Typography>
-          </Box>
+          </Box></SlideSidewayInView>
         </Grid>
       </Grid>
 
-      <Grid container spacing={4} mt={3} alignItems="center">
+      <Grid container spacing={4} mt={2} alignItems="center">
         <Grid size={{ md: 6, xs: 12 }}>
           <Typography variant="body1" sx={{ mb: 2 }}>
             Based in Saudi Arabia, we are a leading provider of comprehensive event transportation and crowd management services, dedicated to delivering seamless logistics and uncompromising safety for events of all sizes.
@@ -105,7 +112,10 @@ const Services = () => {
               background: 'linear-gradient(to right, #d38c3a, #8c4f10)',
               padding: '20px',
               width: { xs: '100%', sm: '60%', md: '50%' },
-              borderTopRightRadius: '36px',
+             borderTopLeftRadius: "8px",
+                borderTopRightRadius: "20px",
+                borderBottomLeftRadius: "8px",
+                borderBottomRightRadius: "8px",
               mt: 18,
               color: '#fff',
               display: 'flex',
@@ -113,14 +123,18 @@ const Services = () => {
               justifyContent: 'center',
             }}
           >
+            <SlideSidewayInView>
+
+           
             <Typography
               variant="h4"
-              sx={{ m: 0, p: 0, textAlign: 'center', width: '100%', fontWeight: 700 }}
+              sx={{ m: 0, p: 0, textAlign: 'center', width: '100%', fontWeight: 700,marginBottom: '20px' }}
             >
               Why Choose Us
             </Typography>
+             </SlideSidewayInView>
           </Box>
-          <Box sx={{ flexGrow: 1, padding: 2 }}>
+          <Box sx={{ flexGrow: 1, padding: 2 ,marginTop: '20px'}}>
             <Grid container spacing={3}>
               {images.map((image, index) => (
                 <Grid size={{ md: 6, xs: 12 }} key={index}>
@@ -151,7 +165,7 @@ const Services = () => {
           </Box>
         </Grid>
       </Grid>
-      <Box
+      {/* <Box
             sx={{
               background: '#67B6B2',
               padding: '20px',
@@ -176,9 +190,9 @@ const Services = () => {
             >
              Our Clients
             </Typography>
-          </Box>
+          </Box> */}
 
-          <Grid container spacing={4}>
+          {/* <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 2 }}>
            <Box sx={{mt:2,px:2}}>
             <Image
@@ -190,7 +204,7 @@ const Services = () => {
             />
           </Box>
         </Grid>
-        </Grid>
+        </Grid> */}
           <Grid size={{ md: 6, xs: 12 }}>
          
         </Grid>

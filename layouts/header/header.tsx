@@ -24,8 +24,8 @@ import HeroBox from "@components/hero-Box/hero-box";
 
 // Header colors
 const HEADER_BG = "#67B6B2";
-const TEXT_COLOR = "#1F1F1F";
-const ACTIVE_COLOR = "#0066CC";
+const TEXT_COLOR = "#ffffff";
+const ACTIVE_COLOR = "#1F1F1F";
 
 function Header() {
   const pathName = usePathname();
@@ -99,12 +99,12 @@ const DashboardHeader: React.FC = () => {
               src={eventForceLogo}
               alt=" Event Force Logo"
               width={200}
-              height={42}
+              height={40}
               style={{ maxWidth: "100%", height: "auto" }}
             />
           </Stack>
 
-          <Stack spacing={0.5} flexGrow={1} pl={{ xs: 1, md: 4 }}>
+          <Stack spacing={0.5} flexGrow={1} pl={{ xs: 1, md: 4 ,}}>
             <Box
               sx={{
                 width: "100%",
@@ -122,6 +122,7 @@ const DashboardHeader: React.FC = () => {
                 gap: { xs: 1, md: 3 },
                 flexWrap: "wrap",
                 justifyContent: "flex-end",
+                
               }}
             >
               {filteredNavbarData.map(({ id, title, link }) => {
@@ -148,17 +149,19 @@ const DashboardHeader: React.FC = () => {
           </Stack>
         </Stack>
       </Grid>
-      <Grid>
+      <Grid >
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="center"
+          
         >
           <Box
             sx={{
               width: { xs: "60%", md: "70%" },
               height: { xs: "10px", md: "15px" },
               background: "linear-gradient(to right, #d38c3a, #8c4f10)",
+             
             }}
           >
             <Box
@@ -179,7 +182,7 @@ const DashboardHeader: React.FC = () => {
           </Box>
 
           <Typography
-            variant="h2"
+            variant="h3"
             color="black"
             sx={{
               fontFamily: "Arial, sans-serif",
@@ -188,7 +191,7 @@ const DashboardHeader: React.FC = () => {
               fontWeight: 700,
               direction: "rtl",
               mx: 2,
-              mt: 2,
+              mt:'16px'
             }}
           >
             مؤسسة قوة الحدث للترفيه
