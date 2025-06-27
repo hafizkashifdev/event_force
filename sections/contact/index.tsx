@@ -14,6 +14,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const formik = useFormik({
@@ -31,19 +33,21 @@ const Contact = () => {
       // EmailJS integration
       try {
         await emailjs.send(
-          'YOUR_SERVICE_ID', // replace with your EmailJS service ID
-          'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
+          'service_bmve0k8',
+          'template_vv6syjj', 
           {
             from_name: values.name,
             from_email: values.email,
             message: values.description,
+            to_email: 'hafizkashifdev@gmail.com', 
           },
-          'YOUR_PUBLIC_KEY' // replace with your EmailJS public key
+          '1Bh7X2Ci3ofakBVkj' 
         );
+        toast.success('Message sent successfully!', { position: 'top-right' });
+        resetForm();
       } catch (error) {
-        // Optionally handle error
+        toast.error('Failed to send message. Please try again.', { position: 'top-right' });
       }
-      resetForm();
     },
   });
 
@@ -74,6 +78,7 @@ const Contact = () => {
         },
       }}
     >
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
       <Container
       maxWidth="xl"
         sx={{
