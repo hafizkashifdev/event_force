@@ -13,7 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
-import { FontSize } from "@root/enems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -82,9 +81,9 @@ const DashboardHeader: React.FC = () => {
       direction="column"
       sx={{
         backgroundColor: "transparent",
-        px: { xs: 1, md: 4 },
-        pt: { xs: 1, md: 2 },
-        display: { xs: "none", lg: "flex" },
+        px: { xs: 1, sm: 2 },
+        pt: { xs: 1, sm: 2 },
+        display: { xs: "none", sm: "flex" },
       }}
     >
       {/* Top Row */}
@@ -94,35 +93,43 @@ const DashboardHeader: React.FC = () => {
           justifyContent="space-between"
           alignItems="flex-start"
         >
-          <Stack direction="row" alignItems="center" spacing={2}>
-            <Image
-              src={eventForceLogo}
-              alt=" Event Force Logo"
-              width={200}
-              height={40}
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Stack>
+         <Stack direction="row" alignItems="center" spacing={2}>
+  <Box
+    sx={{
+      width: { xs: 180, md: 200 }, // 120px on small screens, 200px on md+
+      maxWidth: "100%",
+      height: "auto",
+    }}
+  >
+    <Image
+      src={eventForceLogo}
+      alt="Event Force Logo"
+      width={200}
+      height={40}
+      style={{ width: "100%", height: "auto", display: "block" }}
+      sizes="(max-width: 900px) 120px, 200px"
+    />
+  </Box>
+</Stack>
 
-          <Stack spacing={0.5} flexGrow={1} pl={{ xs: 1, md: 4 ,}}>
+          <Stack spacing={0.5} flexGrow={1} pl={{ xs: 1, sm: 2,md:4 }}>
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "6px", md: "12px" },
+                height: { xs: "6px", sm: "12px" },
                 background: "#1F1F1F",
               }}
             />
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "auto", md: "34px" },
+                height: { xs: "auto", sm: "34px" ,},
                 backgroundColor: "#67B6B2",
                 display: "flex",
                 alignItems: "center",
-                gap: { xs: 1, md: 3 },
+                gap: { xs: 1, md: 2 },
                 flexWrap: "wrap",
-                justifyContent: "flex-end",
-                
+                justifyContent: { xs: "flex-start", md: "flex-end"}
               }}
             >
               {filteredNavbarData.map(({ id, title, link }) => {
@@ -134,8 +141,8 @@ const DashboardHeader: React.FC = () => {
                     sx={{
                       color: isActive ? ACTIVE_COLOR : TEXT_COLOR,
                       fontWeight: isActive ? 500 : 500,
-                      fontSize: { xs: "0.85rem", md: "0.95rem" },
-                      px: { xs: 1, md: 2 },
+                      fontSize: { xs: "0.85rem", sm:"0.75rem",md: "0.95rem",lg:'1rem' },
+                      px: { xs: 1,lg:2 },
                       borderRadius: 2,
                       transition: "color 0.2s",
                       whiteSpace: "nowrap",
@@ -149,19 +156,17 @@ const DashboardHeader: React.FC = () => {
           </Stack>
         </Stack>
       </Grid>
-      <Grid >
+      <Grid>
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          
         >
           <Box
             sx={{
-              width: { xs: "60%", md: "70%" },
-              height: { xs: "10px", md: "15px" },
+              width: { xs: "60%", sm: "70%" },
+              height: { xs: "10px", sm: "15px" },
               background: "linear-gradient(to right, #d38c3a, #8c4f10)",
-             
             }}
           >
             <Box
@@ -171,10 +176,10 @@ const DashboardHeader: React.FC = () => {
             />
             <Box
               sx={{
-                width: { xs: "30%", md: "60%" },
-                height: { xs: "3px", md: "6px" },
+                width: { xs: "30%", sm: "60%" },
+                height: { xs: "3px", sm: "6px" },
                 backgroundColor: "#2E2E2E",
-                mt: { xs: -1, md: 3 },
+                mt: { xs: 1, sm: 3 },
                 ml: "auto",
                 mr: 0,
               }}
@@ -187,11 +192,11 @@ const DashboardHeader: React.FC = () => {
             sx={{
               fontFamily: "Arial, sans-serif",
               whiteSpace: "nowrap",
-              fontSize: { xs: "1.1rem", md: "2rem" },
+              fontSize: { xs: "1.1rem", sm: "2rem" },
               fontWeight: 700,
               direction: "rtl",
               mx: 2,
-              mt:'16px'
+              mt: "16px",
             }}
           >
             مؤسسة قوة الحدث للترفيه
@@ -204,24 +209,20 @@ const DashboardHeader: React.FC = () => {
 
 const MobileHeader = (props: any) => {
   const pathName = usePathname();
-  const { toggleDrawerMenu, anchorElAdd, openMenu, handleCloseAdd } = props;
-  const filteredNavbarData = pagesNavbarData;
-  React.useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const handleResize = () => {
-      if (window.innerWidth >= 1200 && openMenu) {
-        toggleDrawerMenu();
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [openMenu, toggleDrawerMenu]);
+  const { toggleDrawerMenu, openMenu } = props;
+  const [isClicked, setIsClicked] = useState(false); // Added state for click
+
+  const handleClick = () => {
+    setIsClicked(true);
+    toggleDrawerMenu();
+    setTimeout(() => setIsClicked(false), 200); // Reset after click animation
+  };
 
   return (
     <Box
       sx={{
         width: "100%",
-        display: { xs: "flex", lg: "none" },
+        display: { xs: "flex", sm: "none" },
         minHeight: "50px",
         backgroundColor: "transparent",
         color: TEXT_COLOR,
@@ -240,8 +241,8 @@ const MobileHeader = (props: any) => {
             <Link href="/">
               <Image
                 src={eventForceLogo}
-                alt=" Event Force Logo"
-                width={120}
+                alt="Event Force Logo"
+                width={200}
                 height={32}
                 style={{ maxWidth: "100%", height: "auto" }}
               />
@@ -250,25 +251,30 @@ const MobileHeader = (props: any) => {
           {/* Hamburger menu on the right */}
           <Tooltip title="Menu">
             <IconButton
-              onClick={toggleDrawerMenu}
+              onClick={handleClick}
               sx={{
-                background: 'transparent',
-                boxShadow: 'none',
+                background: openMenu ? "#fff" : "#fff",
+                color: "#67B6B2",
+                boxShadow: "none",
                 p: 1,
-                '&:hover': {
-                  background: 'transparent',
+                "&:hover": {
+                  background: openMenu ? "#transparent" : "#4a9e9e",
                 },
-                '&:active': {
-                  background: 'transparent',
+                "&:active": {
+                  background: "transparent", 
                 },
-                transition: 'transform 0.3s',
-                transform: openMenu ? 'rotate(90deg) scale(1.1)' : 'none',
+                transition: "transform 0.3s, background 0.3s",
+                transform: openMenu ? "rotate(90deg) scale(1.1)" : "none",
               }}
             >
               {openMenu ? (
-                <CloseIcon sx={{ fontSize: 32, color: TEXT_COLOR, transition: 'all 0.3s' }} />
+                <CloseIcon
+                  sx={{ fontSize: 32, color: "#000", transition: "all 0.3s" }}
+                />
               ) : (
-                <MenuIcon sx={{ fontSize: 30, color: TEXT_COLOR, transition: 'all 0.3s' }} />
+                <MenuIcon
+                  sx={{ fontSize: 30, color: "#67B6B2", transition: "all 0.3s" }}
+                />
               )}
             </IconButton>
           </Tooltip>
@@ -279,65 +285,69 @@ const MobileHeader = (props: any) => {
           onClose={toggleDrawerMenu}
           sx={{
             borderRadius: "10px",
-            '& .MuiDrawer-paper': {
+            "& .MuiDrawer-paper": {
               backgroundColor: HEADER_BG,
               color: TEXT_COLOR,
               borderRadius: 3,
               width: 260,
               p: 0,
-              boxShadow: 'none',
-              overflowX: 'hidden',
+              boxShadow: "none",
+              overflowX: "hidden",
             },
           }}
         >
-          <Box
-            sx={{
-              width: "100%",
-              backgroundColor: HEADER_BG,
-              pr: 4,
-              color: TEXT_COLOR,
-              borderRadius: 5,
-            }}
-          >
-            <IconButton
-              sx={{ display: "block", ml: "auto" }}
-              onClick={toggleDrawerMenu}
-            >
-              <CloseIcon sx={{ color: TEXT_COLOR }} />
-            </IconButton>
-          </Box>
           <Stack
             alignItems="flex-start"
-            justifyContent="center"
+            justifyContent="flex-start"
             width="100%"
-            paddingLeft={2}
+            padding={2}
             gap={1}
           >
-            {openMenu && filteredNavbarData.map(({ id, title, link }) => {
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <IconButton
+                onClick={handleClick}
+                sx={{
+                  backgroundColor: isClicked ? "transparent" : "transparent",
+                  "&:hover": {
+                    backgroundColor: "transparent",
+                  },
+                  "&:active": {
+                    backgroundColor: "transparent", 
+                  },
+                }}
+              >
+                <CloseIcon sx={{ fontSize: 32, mr: 2 }} />
+              </IconButton>
+            </Box>
+            {/* Navigation links */}
+            {pagesNavbarData.map(({ id, title, link }) => {
               const isActive = pathName === link;
               return (
-                <Box key={`mobile-page-${id}`} width="100%">
-                  <StyledNavLink
-                    href={link}
-                    onClick={handleCloseAdd}
-                    sx={{
-                      fontSize: FontSize.Huge,
-                      color: isActive ? ACTIVE_COLOR : TEXT_COLOR,
-                      width: "100%",
-                      textAlign: "left",
-                      py: 1,
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      gap: 1,
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <Box display="flex" alignItems="center" gap={0.5}>
-                      {title}
-                    </Box>
-                  </StyledNavLink>
-                </Box>
+                <Link
+                  key={`mobile-page-${id}`}
+                  href={link}
+                  style={{
+                    color: isActive ? ACTIVE_COLOR : TEXT_COLOR,
+                    fontWeight: isActive ? 600 : 400,
+                    fontSize: "1.1rem",
+                    textDecoration: "none",
+                    width: "100%",
+                    padding: "12px 0",
+                    borderRadius: 6,
+                    display: "block",
+                    marginBottom: 2,
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                  onClick={toggleDrawerMenu}
+                >
+                  {title}
+                </Link>
               );
             })}
           </Stack>

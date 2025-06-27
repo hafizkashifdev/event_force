@@ -1,154 +1,144 @@
 "use client";
-import IconFacebook from "@assets/footer/Icon-facebook";
-import IconInstagram from "@assets/footer/Icon-instagram";
-import IconLinkedin from "@assets/footer/Icon-linkedin";
-import IconTickTok from "@assets/footer/Icon-ticktok";
-import IconX from "@assets/footer/Icon-X";
-import IconYoutube from "@assets/footer/Icon-youtube";
-import { AppLogoIcon } from "@assets/icons";
 import HeroBox from "@components/hero-Box/hero-box";
 import {
   Box,
-  Divider,
   Grid,
-  IconButton,
   Stack,
   styled,
   Typography,
 } from "@mui/material";
-import { Color, Routes } from "@root/enems";
+import { Color, } from "@root/enems";
 import Link from "next/link";
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import React from "react";
 
 function Footer() {
   return (
-    <HeroBox px={{ xs: 0, lg: 1 }}>
-      <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        width: '100%',
-        mt:8
-      }}
-    >
-      {/* Gradient line */}
+    <HeroBox px={{ xs: 2, sm: 3, md: 4, lg: 6 }}>
+    
       <Box
         sx={{
-          flexGrow: 1,
-          height: '2px',
-          px:6,
-          background: 'linear-gradient(to right, #e9a04e, #5c3c0d)', // adjust as needed
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          mt: { xs: 4, md: 8 },
         }}
-      />
-      
-      {/* Circle dot */}
-      <Box
-        sx={{
-          width: 24,
-          height: 24,
-          borderRadius: '50%',
-          background: 'linear-gradient(to right, #e9a04e, #5c3c0d)', // same gradient
-          marginLeft: '-12px', // slightly overlaps the end of the line
-        }}
-      />
-    </Box>
+      >
+        <Box
+          sx={{
+            flexGrow: 1,
+            height: "2px",
+            background: "linear-gradient(to right, #e9a04e, #5c3c0d)",
+          }}
+        />
+        <Box
+          sx={{
+            width: 24,
+            height: 24,
+            borderRadius: "50%",
+            background: "linear-gradient(to right, #e9a04e, #5c3c0d)",
+            marginLeft: "-12px",
+
+          }}
+        />
+      </Box>
+
       <footer
         style={{
-          padding: "10px 20px",
-          
           position: "relative",
         }}
       >
-       
         <Grid
           container
           justifyContent="space-between"
           alignItems="center"
-          sx={{ maxWidth: "1400px", margin: "0 auto", flexWrap: "wrap" }}
+          sx={{ width: "100%", maxWidth: "1400px", margin: "0 auto", gap: { xs: 2, md: 0 },mt:4 }} // Added gap for small screens
         >
-          <Grid >
-            <Stack direction="row" spacing={2} alignItems="center">
-              <Link href="tel:+966594279012" style={{ textDecoration: "none", color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
-                <PhoneIcon sx={{ fontSize: 18, mr: 0.5 }} />
-                <Typography variant="body2">+966 59 427 9012</Typography>
-              </Link>
-              <Link href="mailto:Reservations@eventforce.sa" style={{ textDecoration: "none", color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
-                <EmailIcon sx={{ fontSize: 18, mr: 0.5 }} />
-                <Typography variant="body2">Reservations@eventforce.sa</Typography>
+          {/* Phone Info - Left */}
+          <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: { xs: "center", md: "left" } }}>
+            <Stack  sx={{ alignItems: { xs: "left", md: "left" } }}>
+              <Link
+                href="tel:+966594279012"
+                style={{
+                  textDecoration: "none",
+                  color: "#333",
+                  display: "flex",
+                  alignItems: "center",
+                  
+                }}
+              >
+                <PhoneIcon sx={{ fontSize: 18 }} />
+                <Typography variant="body2" >+966 59 427 9012</Typography>
               </Link>
             </Stack>
           </Grid>
-          <Grid >
-            <Typography variant="body2" style={{ color: "#333", display: 'flex', alignItems: 'center', gap: 4 }}>
-              <LocationOnIcon sx={{ fontSize: 18, mr: 0.5 }} />
-شارع المكرونة فرعي، حي الربوة، جدة، المملكة العربية السعودية            </Typography>
+
+          {/* Email Info - Center */}
+          <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: { xs: "left", md: "center" } }}>
+            <Link
+              href="mailto:Reservations@eventforce.sa"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                display: "flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              <EmailIcon sx={{ fontSize: 18 ,}} />
+              <Typography variant="body2"     sx={{justifyContent: { xs: "left", md: "flex-end" }}}>Reservations@eventforce.sa</Typography>
+            </Link>
           </Grid>
-          <Grid >
-           
-              <Typography variant="body2" style={{ color: "#333" }}>
-                © 2025 Event Force All Rights Reserved
-              </Typography>
-            
+
+          {/* Address Info - Right */}
+          <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: { xs: "left", md: "right" } }}>
+            <Typography
+              variant="body2"
+              sx={{
+                color: "#333",
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                justifyContent: { xs: "left", md: "flex-end" },
+              }}
+            >
+              <LocationOnIcon sx={{ fontSize: 18 }} />
+              شارع المكرونة فرعي، حي الربوة، جدة، المملكة العربية السعودية
+            </Typography>
           </Grid>
         </Grid>
-        {/* Optional: Add social media icons if needed */}
-        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mt: 6,mb:4 }}>
-          <IconButton>
-            <IconFacebook />
-          </IconButton>
-          <IconButton>
-            <IconInstagram />
-          </IconButton>
-          <IconButton>
-            <IconLinkedin />
-          </IconButton>
-          <IconButton>
-            <IconTickTok />
-          </IconButton>
-          <IconButton>
-            <IconX />
-          </IconButton>
-          <IconButton>
-            <IconYoutube />
-          </IconButton>
-        </Stack>
-       
+
         <Box
-      sx={{
-        width: '100%',
-        height: '4px', // very thin bar
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      {/* Left flat line */}
-      <Box
-        sx={{
-          flex: 1,
-          backgroundColor: '#67B6B2',
-          height: '2px',
-        }}
-      />
-
-      {/* Right rounded end */}
-      <Box
-        sx={{
-          width: '150px', // adjust based on your design
-          height: '18px',   // slightly larger for a visible gradient effect
-          background: 'linear-gradient(to bottom, #67B6B2, #2d5c5b)', // subtle depth
-          borderTopRightRadius: '4px',
-          borderBottomRightRadius: '4px',
-          mt:1.2
-        }}
-      />
-    </Box>
+          sx={{
+            width: "100%",
+            height: "4px",
+            display: "flex",
+            alignItems: "center",
+            mt:4,
+            mb:6
+          }}
+        >
+          <Box
+            sx={{
+              flex: 1,
+              backgroundColor: "#67B6B2",
+              height: "2px",
+            }}
+          />
+          <Box
+            sx={{
+              width: { xs: "100px", sm: "150px" },
+              height: "18px",
+              background: "linear-gradient(to bottom, #67B6B2, #2d5c5b)",
+              borderTopRightRadius: "4px",
+              borderBottomRightRadius: "4px",
+              mt: 1.7,
+            }}
+          />
+        </Box>
       </footer>
-
-      
     </HeroBox>
   );
 }

@@ -13,11 +13,10 @@ const AboutUs = () => {
     <>
       <HeroSection />
       <OurMission />
-      <Box sx={{mt:-20}}>
+      {/* <Box sx={{mt:-20}}>
 <Coverage />
-      </Box>
-      <Box>
-      </Box>
+      </Box> */}
+      
       <WhatWeDO />
       
     </>

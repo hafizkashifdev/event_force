@@ -47,6 +47,7 @@ const Services = () => {
     { title: 'Luxury Fleet', src: CoverImage7.src },
   ];
 
+  
 
 
 
@@ -54,7 +55,7 @@ const Services = () => {
   return (
     <Container maxWidth="xl" data-aos="fade-up">
       <Grid container spacing={4}>
-        <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 18 }}>
+        <Grid size={{ xs: 12, md: 12 }} sx={{ mt:{xs:10,sm:16,md:18} }}>
           <SlideSidewayInView>
           <Box
             sx={{
@@ -71,10 +72,10 @@ const Services = () => {
 
             }}
           >
-            <Typography variant="h6" fontWeight="bold" letterSpacing={2}>
+            <Typography variant="h5" fontWeight="bold" letterSpacing={2}>
               EVENT TRANSPORTATION &
             </Typography>
-            <Typography variant="h6" fontWeight="bold" letterSpacing={2}>
+            <Typography variant="h5" fontWeight="bold" letterSpacing={2}>
               CROWD MANAGEMENT SOLUTIONS
             </Typography>
           </Box></SlideSidewayInView>
@@ -82,7 +83,7 @@ const Services = () => {
       </Grid>
 
       <Grid container spacing={4} mt={2} alignItems="center">
-        <Grid size={{ md: 6, xs: 12 }}>
+        <Grid size={{ xs: 12,md: 6,  }} sx={{mt:{xs:2,md:-2,lg:-5,xl:-35}}}>
           <SlideSidewayInView>
           <Typography variant="body1" sx={{ mb: 2 }}>
             Based in Saudi Arabia, we are a leading provider of comprehensive event transportation and crowd management services, dedicated to delivering seamless logistics and uncompromising safety for events of all sizes.
@@ -122,38 +123,41 @@ const Services = () => {
             We ensure efficient crowd control, smooth VIP movements, professional parking management, and the highest standards of safety and order. Trusted by clients across the Kingdom, we are the go-to partner for flawless event execution and operational excellence.
           </Typography></SlideUpInView>
         </Grid>
-        <Grid size={{ md: 6, xs: 12 }}>
-          <Box sx={{ width: '100%', borderRadius: '20px', overflow: 'hidden' }}>
-            <Image
-              src={CoverImage4}
-              alt="Event Transportation"
-              width={500}
-              height={500}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-            />
-          </Box>
-        </Grid>
+       <Grid size={{ xs: 12, md: 6 }}>
+  <Box sx={{ width: '100%', borderRadius: '20px', overflow: 'hidden' }}>
+    <Image
+      src={CoverImage4}
+      alt="Event Transportation"
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+    />
+  </Box>
+</Grid>
       </Grid>
 
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 2 }}>
+          <SlideSidewayInView>
           <Box
             sx={{
               background: 'linear-gradient(to right, #d38c3a, #8c4f10)',
               padding: '20px',
-              width: { xs: '100%', sm: '60%', md: '50%' },
-             borderTopLeftRadius: "8px",
-                borderTopRightRadius: "20px",
-                borderBottomLeftRadius: "8px",
-                borderBottomRightRadius: "8px",
+              width: { xs: '80%', sm: '60%', md: '50%' },
+                  borderTopLeftRadius: "8px",
+                  borderTopRightRadius: "8px",
+                  borderBottomLeftRadius: "36px",
+                  borderBottomRightRadius: "8px",
               mt: 4,
+              mb:4,
               color: '#fff',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
           >
-            <SlideSidewayInView>
+            
 
            
             <Typography
@@ -162,8 +166,8 @@ const Services = () => {
             >
               Why Choose Us
             </Typography>
-             </SlideSidewayInView>
-          </Box>
+          </Box>             </SlideSidewayInView>
+
           <Box sx={{ flexGrow: 1, padding: 2 ,marginTop: '20px'}}>
             <Grid container spacing={3}>
               {images.map((image, index) => (
@@ -195,11 +199,13 @@ const Services = () => {
           </Box>
         </Grid>
       </Grid>
+
+      <SlideUpInView>
       <Box
             sx={{
               background: '#67B6B2',
               padding: '20px',
-              width: { xs: '100%', sm: '60%', md: '50%' },
+              width: { xs: '80%', sm: '60%', md: '50%' },
               borderTopRightRadius: '36px',
               mt:8,
               color: '#fff',
@@ -220,51 +226,58 @@ const Services = () => {
             >
              Our Clients
             </Typography>
-          </Box>
+          </Box></SlideUpInView>
 
-          <Box
-      sx={{
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
-        width: '100%',
-        backgroundColor: '#fff',
-        py: 4,
-      }}
-    >
+          <Container maxWidth={false} sx={{ py: 4, backgroundColor: '#fff' }}>
       <Box
         sx={{
-          display: 'inline-flex',
-          gap: 6,
-          transform: `translateX(-${scrollX}px)`,
-          transition: 'transform 0.1s linear',
-          mt:2
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+          width: '100%',
+          mt:4
         }}
+        data-aos="fade-up"
       >
-        {[...logos, ...logos].map((logo: StaticImageData, index: number) => (
-          <Box
-            key={index}
-            sx={{
-              minWidth: '120px',
-              height: '60px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Image
-              src={logo}
-              alt={`logo-${index}`}
-              width={100}
-              height={60}
-              style={{ objectFit: 'contain' }}
-            />
-          </Box>
-        ))}
+        <Box
+          sx={{
+            display: 'inline-flex',
+            gap: { xs: 2, sm: 4, md: 6 }, // Responsive gap
+            animation: 'scroll 20s linear infinite', // Smooth CSS animation
+            willChange: 'transform', // Optimize performance
+            '&:hover': {
+              animationPlayState: 'paused', // Optional: pause on hover
+            },
+            '@keyframes scroll': {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }, // Move half the width (since logos are duplicated)
+            },
+          }}
+        >
+          {/* Render logos twice for seamless looping */}
+          {[...logos, ...logos].map((logo: StaticImageData, index: number) => (
+            <Box
+              key={index}
+              sx={{
+                minWidth: { xs: '80px', sm: '100px', md: '120px' }, // Responsive logo width
+                height: { xs: '40px', sm: '50px', md: '60px' }, // Responsive height
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0, // Prevent logos from shrinking
+              }}
+            >
+              <Image
+                src={logo}
+                alt={`logo-${index}`}
+                width={100}
+                height={60}
+                style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+              />
+            </Box>
+          ))}
+        </Box>
       </Box>
-    </Box>
-          <Grid size={{ md: 6, xs: 12 }}>
-         
-        </Grid>
+    </Container>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import { HeroSectionImage, missionDSCImage2, missionDSCImage3 } from "@assets/about-us";
-import { Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { Color } from "@root/enems";
 import { FontSize, FontWeight } from "@root/enems/text-size";
 import "aos/dist/aos.css";
@@ -24,15 +24,18 @@ const HeroSection = () => {
         <Grid container spacing={2} >
           <Grid size={{ xs: 12, md: 12 }} sx={{ mt: "120px" }}>
             <ScaleInView>
-            <Typography
-              sx={{
-                fontSize: FontSize.title,
-                fontWeight: FontWeight.SemiBold,
-                color: Color.TextGreen,
-              }}
-            >
-              About Us – Who We Are
-            </Typography></ScaleInView>
+          <Typography
+  sx={{
+    fontSize: {
+      xs: '2.5rem', // Custom rem for small screens (adjust as needed)
+      sm: FontSize.title, // Original font size for larger screens
+    },
+    fontWeight: FontWeight.SemiBold,
+    color: Color.TextGreen,
+  }}
+>
+  About Us – Who We Are
+</Typography></ScaleInView>
           </Grid>
           <Grid size={{ xs: 12, md: 9 }} sx={{ mt: "20px" }}>
             <SlideUpInView>
@@ -46,19 +49,33 @@ const HeroSection = () => {
               Event Force is a full service professional event management company with more than 10 years of ex- perience, specializing in the creation of customized events for corporate or personal clients, starting with conception, going through planning, design and ending with execution.
             </Typography></SlideUpInView>
           </Grid>
-          <Grid size={{ xs: 12 }} sx={{ mt: "20px" }}>
-            <SlideUpInView>
-            <Image
-              src={missionDSCImage3}
-              alt="image"
-              style={{
-                width: "100%",
-                height: "500px",
-                objectFit: "cover",
-                borderRadius: "20px",
-              }}
-            /></SlideUpInView>
-          </Grid>
+         <Grid size={{ xs: 12 }} sx={{ mt: "20px" }}>
+      <SlideUpInView>
+<Box
+          sx={{
+            width: "100%",
+            aspectRatio: "1200 / 500", // Match the image's native aspect ratio
+            maxHeight: { xs: "300px", sm: "500px" }, // Responsive max-height
+            borderRadius: "20px",
+            overflow: "hidden", // Ensure image respects border radius
+          }}
+        >
+          <Image
+            src={missionDSCImage3}
+            alt="image"
+            style={{
+              width: "100%",
+              height: "100%", // Fill the parent Box
+              objectFit: "cover", // Ensure no stretching
+              borderRadius: "20px",
+            }}
+            sizes="(max-width: 600px) 100vw, 50vw"
+            fill // Replace layout="responsive" with fill for better control
+            priority // Optional: prioritize loading for above-the-fold images
+          />
+        </Box>
+      </SlideUpInView>
+    </Grid>
         </Grid>
       </Container>
     </HeroBox>

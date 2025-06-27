@@ -212,9 +212,15 @@ function HomeSections() {
                 my={1}
                 mt={{ xs: 2, md: -4 }}
               >
-                <Typography variant="h2" color={Color.TextGreen}>
-                  Premium Event Mobility and Logistics
-                </Typography>
+               <Typography
+        variant="h2"
+        color={Color.TextGreen}
+        sx={{
+          fontSize: { xs: "3em", sm: "2,5em", md: "3.5em" }, // Responsive font sizes in em
+        }}
+      >
+        Premium Event Mobility and Logistics
+      </Typography>
               </Stack>
             </Stack>
           </Grid>
@@ -222,7 +228,7 @@ function HomeSections() {
       </HeroBox>
 
       <ContainerGridLayout customStyles={{ alignItems: "center", mt: 8 }}>
-        <ItemGridLayout md={5} lg={6}>
+        <ItemGridLayout xs={12} md={7} lg={6}>
           <SlideUpInView height="100%">
             <Box
               sx={{
@@ -236,8 +242,8 @@ function HomeSections() {
                   lineHeight: "30px",
                   letterSpacing: "-0.3px",
                   color: "#697C77",
-                  py: { xs: 10, md: 5 },
-                  px: { xs: 10, md: 12 },
+                  py: { xs: 2, lg: 5 },
+                  px: { xs: 2, lg: 12 },
                 }}
               >
                 At Event Force for Entertainment, we specialize in managing and
@@ -259,22 +265,22 @@ function HomeSections() {
             </Box>
           </SlideUpInView>
         </ItemGridLayout>
-        <ItemGridLayout md={7} lg={6}>
-          <SlideSidewayInView>
-            <Image
-              src={introductionImage}
-              alt="image"
-              style={{
-                maxWidth: "auto",
-                width: "670px",
-                height: "auto",
-                marginLeft: "auto",
-                objectFit: "contain",
-              }}
-            />
-          </SlideSidewayInView>
-        </ItemGridLayout>
-      </ContainerGridLayout>
+       <ItemGridLayout xs={12} md={5} lg={6}>
+  <SlideSidewayInView>
+    <Image
+      src={introductionImage}
+      alt="image"
+      style={{
+        width: "100%", 
+        maxWidth: "670px", 
+        height: "auto", 
+        marginLeft: "auto", 
+        objectFit: "contain", 
+      }}
+    />
+  </SlideSidewayInView>
+</ItemGridLayout>
+      </ContainerGridLayout> 
       <Box sx={{mt:-12}}>
 <AboutUs/></Box>
       <HeroBox>
@@ -286,6 +292,7 @@ function HomeSections() {
             py: 9,
             px: 6,
             borderRadius: "5px",
+            mt:8
           }}
         >
           <Grid size={{ xs: 12, md: 6 }}>

@@ -12,7 +12,7 @@ export const HeroCard = () => {
     <Container maxWidth="xl">
       <Box>
         <ContainerGridLayout customStyles={{ alignItems: "center" }}>
-          <ItemGridLayout md={5} lg={6}>
+          <ItemGridLayout xs={12} md={5} lg={6}>
             <SlideUpInView height="100%">
               <Box
                 sx={{
@@ -22,10 +22,11 @@ export const HeroCard = () => {
                 <Box sx={{ marginY: 2 }}>
                   <Typography
                     sx={{
-                      fontSize: "3.4rem",
+                      fontSize: {xs:'2.2rem', sm: "2.9rem", lg: "3.4rem"},
                       fontWeight: FontWeight?.SemiBold,
                       lineHeight: "120%",
-                      letterSpacing: "-3px",
+                      letterSpacing: {xs: "1px", md: "2px", lg: "-3px"},
+                      mt:{xs: 0,sm:8, md: 0},
                       color:'#2D504E',
                     }}
                   >
@@ -148,7 +149,7 @@ export const HeroCard = () => {
               </Box>
             </SlideUpInView>
           </ItemGridLayout>
-          <ItemGridLayout md={7} lg={6}>
+          <ItemGridLayout xs={12} md={7} lg={6}>
             <StackImages />
           </ItemGridLayout>
         </ContainerGridLayout>

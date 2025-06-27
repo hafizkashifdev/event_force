@@ -13,6 +13,7 @@ import SlideUpInView from "@components/animations/animation-scroll/slide-up-in-v
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const formik = useFormik({
@@ -27,25 +28,21 @@ const Contact = () => {
       description: Yup.string().required("Description is required"),
     }),
     onSubmit: async (values, { resetForm }) => {
-      console.log("Form Data:", values);
-      const body = {
-        name: values.name,
-        email: values.email,
-        description: values.description,
-      };
+      // EmailJS integration
       try {
-        const response = await fetch(
-          "https://gateway.agenticcreed.ai/enquiries",
+        await emailjs.send(
+          'YOUR_SERVICE_ID', // replace with your EmailJS service ID
+          'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
           {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-              "x-api-key": "61dc2990363eccff494bb35001520edb:5ccab764b03e3c95c3d069897b4fef845d254b371e81d12462a88803c0d7dc0586ad73b4a657152334cbd20f4f1ee9f1b2e6fdcfc9bc0a6bfaf9e920d7c70dfcd9d8e084e0afee8751b76eb20fb74f59166eb9de7fc0a167fe8d10c500661c56",
-            },
-            body: JSON.stringify(body),
-          }
+            from_name: values.name,
+            from_email: values.email,
+            message: values.description,
+          },
+          'YOUR_PUBLIC_KEY' // replace with your EmailJS public key
         );
-      } catch (error) {}
+      } catch (error) {
+        // Optionally handle error
+      }
       resetForm();
     },
   });
@@ -78,6 +75,7 @@ const Contact = () => {
       }}
     >
       <Container
+      maxWidth="xl"
         sx={{
           position: 'relative',
           zIndex: 2,
@@ -87,12 +85,12 @@ const Contact = () => {
       >
         <Grid container spacing={2} justifyContent="center">
           <Grid size={{ xs: 12, md: 12 }} sx={{ mt: 8 }}>
-            <SlideSidewayInView>
+            <SlideUpInView>
               <Box
                 sx={{
                   background: "#67B6B2",
                   padding: "10px",
-                  width: { xs: "100%", sm: "60%", md: "40%" },
+                  width: { xs: "80%", sm: "60%", md: "40%" },
                   borderTopRightRadius: "36px",
                   mt: 10,
                   color: "#fff",
@@ -114,7 +112,7 @@ const Contact = () => {
                   Contact Us
                 </Typography>
               </Box>
-            </SlideSidewayInView>
+            </SlideUpInView>
           </Grid>
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
@@ -218,21 +216,20 @@ const Contact = () => {
             backgroundColor: 'rgba(255, 255, 255, 0.9)',
             borderRadius: 2,
             textAlign: 'center',
+            width: { xs: '100%', sm: '80%', md: '60%', lg: '50%' },
+            mx: 'auto',
           }}
         >
-          <Typography variant="h6" color="black" gutterBottom>
-            Contact Us
-          </Typography>
-          <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
-            <Box display="flex" alignItems="center" gap={1}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" alignItems="center">
+            <Box display="flex" alignItems="center" gap={1} justifyContent={{ xs: 'center', sm: 'flex-start' }}>
               <PhoneIcon sx={{ fontSize: 20, color: 'black' }} />
               <Typography color="black">+966 492 7012</Typography>
             </Box>
-            <Box display="flex" alignItems="center" gap={1}>
+            <Box display="flex" alignItems="center" gap={1} justifyContent={{ xs: 'center', sm: 'flex-start' }}>
               <EmailIcon sx={{ fontSize: 20, color: 'black' }} />
               <Typography color="black">Reservations@eventforce.sa.com</Typography>
             </Box>
-            <Box display="flex" alignItems="center" gap={1}>
+            <Box display="flex" alignItems="center" gap={1} justifyContent={{ xs: 'center', sm: 'flex-end' }}>
               <LocationOnIcon sx={{ fontSize: 20, color: 'black' }} />
               <Typography color="black" dir="rtl">
                 شركة إيفنت فورس لإدارة الأحداث والحشود
